@@ -1,0 +1,43 @@
+// Constants
+
+@navbarHeight: 85px;
+
+// Colors
+
+@about-theme: #488BFF;
+@experience-theme: #B3B3B3;
+@hobbies-theme: #FF7F35;
+@contact-theme: #803A7D;
+
+@home-dark: #5D5D5D;
+@about-dark: #122340;
+@experience-dark: #000000;
+@hobbies-dark: #40200D;
+@contact-dark: #200E1F;
+
+// Color classes
+
+.home-theme { background-color: transparent; }
+.about-theme { background-color: @about-theme; }
+.experience-theme { background-color: @experience-theme; }
+.hobbies-theme { background-color: @hobbies-theme; }
+.contact-theme { background-color: @contact-theme; }
+.home-dark { background-color: @home-dark; }
+.about-dark { background-color: @about-dark; }
+.experience-dark { background-color: @experience-dark; }
+.hobbies-dark { background-color: @hobbies-dark; }
+.contact-dark { background-color: @contact-dark; }
+
+// Mixins
+
+.color-transition {
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+
+.translateX(@amount) {
+  -webkit-transform: translateX(@amount);
+  transform: translateX(@amount);
+}

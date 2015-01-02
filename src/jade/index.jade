@@ -1,4 +1,66 @@
 extends layout
 
 block content
+  #navbar
+    nav
+      #home-link
+        a Home
+        .selector
+      #about-link
+        a About
+        .selector
+      #experience-link
+        a Experience
+        .selector
+      #hobbies-link
+        a Hobbies
+        .selector
+      #contact-link
+        a Contact
+        .selector
+  #home
+    .background
+    .background-blur
+    .title
+      p.name Kevin Wu
+      p.tagline A personal website
+  #about
+    .container
+      .title #[span.first I] am a...
+      .content
+        .spacing
+        .student
+          img(src="imgs/student.svg", alt="Student")
+        .spacing
+        .hacker
+          img(src="imgs/hacker.svg", alt="Hacker")
+        .spacing
+        .gamer
+          img(src="imgs/gamer.svg", alt="Gamer")
+  #experience
+    .container
+      .timeline
+      .spacing
+      .content
+        .title #[span.strong Skirmish] github &sdot; website 
+        .date #[span.strong S] Fall 2013
+        .text
+        .code
+  #hobbies
+    .container
+      .carousel
+        img.prev(src="imgs/prev.svg", alt="Previous Button")
+        .cube
+          .front
+          .back
+          .left
+          .right
+          .top
+          .bottom
+        img.next(src="imgs/next.svg", alt="Next Button")
+      .dotContainer
+        .dots
+      .padding
+      .title
+  #contact
   

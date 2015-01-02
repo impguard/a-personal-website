@@ -30,7 +30,6 @@ module.exports = function(grunt) {
       less: { expand: true, cwd: "src", src: "less/*.less", dest: "bin/styles/" }
     },
     jade: {
-      options: { pretty: true },
       html: {
         files: {
           "bin/index.html": "src/jade/index.jade"
@@ -38,6 +37,7 @@ module.exports = function(grunt) {
       }
     },
     less: {
+      options: { strictMath: true },
       main: handleLess("main")
     },
     coffee: {
