@@ -1,5 +1,4 @@
 // Constants
-
 @navbarHeight: 85px;
 
 // Colors
@@ -40,4 +39,23 @@
 .translateX(@amount) {
   -webkit-transform: translateX(@amount);
   transform: translateX(@amount);
+}
+
+.translateY(@amount) {
+    -webkit-transform: translateY(@amount);
+    transform: translateY(@amount);   
+}
+
+.translate(@amountX, @amountY) {
+    -webkit-transform: translate(@amountX, @amountY);
+    transform: translate(@amountX, @amountY);
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

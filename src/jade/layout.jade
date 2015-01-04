@@ -10,6 +10,10 @@ html
     //- script(type="text/javascript", src="lib/jquery.js")
     script(type="text/javascript", src="lib/jquery.waypoints.min.js")
     script(type="text/javascript", src="lib/velocity.min.js")
+    //- Globals from Jade
+    script(type="text/javascript").
+        window.exports = {}
+        window.exports = !{JSON.stringify(globals)}
     //- Magic.js
     script(type="text/javascript", src="scripts/magic.min.js")
     

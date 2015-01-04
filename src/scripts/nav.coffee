@@ -1,6 +1,9 @@
 $(() ->
 
+    #============================================================
     # Constants
+    #============================================================
+
     $navbar = $("#navbar")
     $links = $("#navbar > nav > div")
     $selectors = $("#navbar .selector")
@@ -9,6 +12,10 @@ $(() ->
     # Navbar state
     $currentSelector = $()
     isScrolling = false;
+
+    #============================================================
+    # Handle Nav Events
+    #============================================================
 
     createHandler = ($link, themeClass, darkClass, textColor) ->
         $selector = $link.children(".selector")
@@ -60,11 +67,11 @@ $(() ->
         $link.hover(
             () ->
                 $a.css("color", "white")
-                $selector.velocity({ top: "0" }, 200)
+                $selector.velocity("stop").velocity({ top: "0" }, 200)
             () ->
                 $a.css("color", "inherit")
                 if $selector[0] isnt $currentSelector[0]
-                    $selector.velocity({ top: "-#{navbarHeight}px" }, 200)
+                    $selector.velocity("stop").velocity({ top: "-#{navbarHeight}px" }, 200)
                     
         )
     )

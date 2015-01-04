@@ -40,12 +40,15 @@ block content
   #experience
     .container
       .timeline
+        .bar
       .spacing
-      .content
-        .title #[span.strong Skirmish] github &sdot; website 
-        .date #[span.strong S] Fall 2013
-        .text
-        .code
+      each project in experience
+        .content(class= project.id)
+          if project.time != null
+            .date #[span.strong S] #{project.time}
+          .title #[span.strong= project.name]
+          .text= project.content
+          .code
   #hobbies
     .container
       .carousel

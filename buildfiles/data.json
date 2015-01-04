@@ -1,0 +1,51 @@
+{
+    "experience": [
+        {
+            "name": "Timeline",
+            "id": "introduction",
+            "time": "",
+            "endDate": null,
+            "duration": null,
+            "type": null,
+            "content": "timeline.txt"
+        },
+        {
+            "name": "Skirmish",
+            "id": "skirmish",
+            "time": "Fall 2013",
+            "endDate": "8-1-2013",
+            "duration": 10,
+            "type": "project",
+            "content": "skirmish.txt"
+        },
+        {
+            "name": "Instaparse",
+            "id": "instaparse",
+            "time": "Fall 2014",
+            "endDate": "12-1-2014",
+            "duration": 2,
+            "type": "project",
+            "content": "instaparse.txt"
+        },
+        {
+            "name": "Microsoft",
+            "id": "microsoft",
+            "time": "Summer 2014",
+            "endDate": "8-10-2014",
+            "duration": 3,
+            "type": "internship",
+            "content": "microsoft.txt"
+        },
+        {
+            "name": "Tron",
+            "id": "tron",
+            "time": "March 2014",
+            "endDate": "3-5-2014",
+            "duration": 0,
+            "type": "project",
+            "content": "tron.txt"
+        }
+    ],
+
+    "globals": {}
+}

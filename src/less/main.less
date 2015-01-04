@@ -247,8 +247,11 @@ a {
 
     .container {
         box-sizing: border-box;
-        padding: 0 6%;
         width: 100%; height: 100%;
+        padding: 0 6%;
+        position: relative;
+        z-index: 0;
+
 
         &:before {
             content: "";
@@ -257,31 +260,97 @@ a {
         }
         
         .timeline, .spacing, .content {
-            display: inline-block;
             box-sizing: border-box;
             height: 90%;
         }
 
+        .timeline, .spacing {
+            float: left;
+        }
+
         .timeline {
-            width: 15%;
-            background-color: red;
+            width: 10%;
+            min-width: 80px; max-width: 140px;
+            position: relative;
+            z-index: 1;
+
+            .bar {
+                width: 20%; height: 100%;
+                position: absolute;
+                background-color: #4D4D4D;
+            }
+
+            .item {
+                width: 100%; height: 10%;
+                position: absolute;
+                top: 50%;
+
+                .duration {
+                    width: 20%; height: 100%;
+                    position: absolute;
+                }
+
+                .connector {
+                    width: calc(100% - 30px); height: 2px;
+                    position: absolute;
+                    top: 50%;
+                    .translateY(-50%);
+                }
+
+                .button {
+                    width: 26px; height: 26px;
+                    border-width: 2px;
+                    border-style: solid;
+                    border-radius: 30px;
+                    position: absolute;
+                    left: calc(100% - 30px); top: 50%;
+                    .translateY(-50%);
+                    text-align: center;
+
+                    img {
+                        position: absolute;
+                        left: 3px;
+
+                        &.internship {
+                            top: 3px;
+                        }
+
+                        &.project {
+                            top: 4px;
+                        }
+                    }
+
+                    .name {
+                        display: none;
+                        padding-left: 20px;
+                        font-size: 18px;
+                        white-space: nowrap;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
         }
 
         .spacing {
-            width: 10%;
-            background-color: blue;
+            width: 7%;
         }
 
         .content {
+            display: none;
             position: relative;
-            width: 75%;
             vertical-align: top;
+            font-size: 24px;
+            font-weight: 300;
+
+            &.selected {
+                display: block;
+            }
             
             .title, .date {
-                position: absolute;
-                width: 100%;
-                font-size: 24px;
-                font-weight: 300;
+                height: 80px;
                 line-height: 1;
             }
             
@@ -292,11 +361,18 @@ a {
             }
 
             .date {
-                text-align: right;
+                float: right;
 
                 .strong {
                     color: @experience-theme;
+                    .unselectable();
                 }
+            }
+
+            .text {
+                box-sizing: border-box;
+                height: 60%;
+                overflow-y: scroll;
             }
         }
     }
@@ -333,7 +409,7 @@ a {
             .prev, .next {
                 position: absolute;
                 top: 50%;
-                transform: translateY(-50%);
+                .translateY(-50%);
                 width: 10%;
 
                 &:hover {

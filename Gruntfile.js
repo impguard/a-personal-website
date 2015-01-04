@@ -1,4 +1,40 @@
-/* Simple helper function to generate less file targets */
+path = require("path");
+fs = require("fs");
+_ = require("underscore")
+
+//============================================================
+// Jade
+//============================================================
+buildDir = "buildfiles";
+jadeObj = JSON.parse(fs.readFileSync(path.join(buildDir, "data.json"), "utf8"));
+
+// Experience page
+jadeObj.globals.experience = [];
+
+jadeObj.experience = _.sortBy(jadeObj.experience, function(item) { return new Date(item.endDate) });
+_.each(jadeObj.experience, function(item, index, list) {
+  // Read content from files
+  filename = item.content;
+  item.content = fs.readFileSync(path.join(buildDir, filename), "utf8");
+
+  // Construct globals
+  if (item.endDate != null) {
+    jadeObj.globals.experience.push({
+      name: item.name,
+      id: item.id,
+      endDate: new Date(item.endDate),
+      duration: item.duration,
+      type: item.type
+    });
+  }
+});
+
+
+//============================================================
+// Helper Functions
+//============================================================
+
+// Helper function for generating less files
 var handleLess = function(name) {
   return {
     options: { 
@@ -31,6 +67,7 @@ module.exports = function(grunt) {
     },
     jade: {
       html: {
+        options: { data: jadeObj },
         files: {
           "bin/index.html": "src/jade/index.jade"
         }
