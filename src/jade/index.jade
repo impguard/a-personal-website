@@ -19,36 +19,40 @@ block content
         a Contact
         .selector
   #home
-    .background
-    .background-blur
     .title
       p.name Kevin Wu
       p.tagline A personal website
   #about
     .container
-      .title #[span.first I] am a...
-      .content
-        .spacing
-        .student
-          img(src="imgs/student.svg", alt="Student")
-        .spacing
-        .hacker
-          img(src="imgs/hacker.svg", alt="Hacker")
-        .spacing
-        .gamer
-          img(src="imgs/gamer.svg", alt="Gamer")
+      .wall
+        .counter
+          img.portrait(src="imgs/portrait.svg", alt="Portrait")
+          img.student(src="imgs/backpack.svg", alt="Student")
+          img.hacker(src="imgs/laptop.svg", alt="Hacker")
+          img.gamer(src="imgs/desktop.svg", alt="Gamer")
+      .table
+        .top
+        .shadow
   #experience
     .container
       .timeline
         .bar
       .spacing
       each project in experience
-        .content(class= project.id)
-          if project.time != null
+        .content(id= project.id)
+          if project.time
             .date #[span.strong S] #{project.time}
-          .title #[span.strong= project.name]
+          .title #[span.strong= project.name]&nbsp;
+            if project.github
+              a(href=project.github, target="_blank") github
+            if project.github && project.website
+              &nbsp;&middot;&nbsp;
+            if project.website
+              a(href=project.website, target="_blank") website
           .text= project.content
-          .code
+            .text-fade-before
+            .text-fade-after
+          .breakdown
   #hobbies
     .container
       .carousel
@@ -66,4 +70,18 @@ block content
       .padding
       .title
   #contact
+    .container
+      .title Find me at
+      br
+      a.email(href="#")
+      br
+      br
+      .sources
+        .github
+          img(src="imgs/github.svg", alt="Github")
+        .linkedin
+          img(src="imgs/linkedin.svg", alt="LinkedIn")
+        .resume
+          img(src="imgs/resume.svg", alt="Resume")
+    .footer Copyright &copy; 2015 - Kevin Wu
   

@@ -1,12 +1,4 @@
-$(window).load(() ->
-    #============================================================
-    # Helper functions
-    #============================================================
-
-    # Helper to calculate days in between two dates
-    Date.daysInBetween = (fromDate, toDate) ->
-        diff = toDate - fromDate
-        return Math.floor(diff / 86400000)
+$window.load(() ->
 
     #============================================================
     # Constants
@@ -15,9 +7,182 @@ $(window).load(() ->
     $experience = $("#experience")
     $timeline = $experience.find(".timeline")
 
-    startDate = new Date("June 2010")
-    endDate = new Date("June 2015")
+    startDate = new Date("June 1 2010")
+    endDate = new Date("June 1 2015")
     totalDays = Date.daysInBetween(startDate, endDate)
+
+    # Fill in later
+    langToColor = {
+        "c++": 
+            "secondary": "gray"
+            "primary": "black"
+        "java":
+            "secondary": "gray"
+            "primary": "orange"
+        "ts":
+            "secondary": "gray"
+            "primary": "red"
+        "js":
+            "secondary": "gray"
+            "primary": "purple"
+    }
+
+    #============================================================
+    # Experience Page State
+    #============================================================    
+
+    # Current content being displayed
+    $currentContent = $()
+
+    #============================================================
+    # Code dials
+    #============================================================
+
+    dialHeightRatio = 0.9
+
+    $.each(window.exports.experience, (index, item) -> 
+        $("##{item.id}").data("breakdown", item.breakdown)
+    )
+
+    resizeCodeDials = () ->
+        $breakdown = $currentContent.children(".breakdown")
+        dialSize = dialHeightRatio * $breakdown.height()
+        $breakdown.children(".block").width(dialSize).height(dialSize)
+
+    updateCodeDials = () ->
+        breakdown = $currentContent.data("breakdown")
+        if not breakdown?
+            return
+
+        $breakdown = $currentContent.children(".breakdown")
+        if $currentContent.data("hasDials")
+            $breakdown.children(".block").each((index, block) ->
+                $block = $(block)
+                dial = $block.data("dial")
+                percent = $block.data("percent")
+
+                dial.set(0)
+                dial.animate($block.data("percent"))
+            )
+            return
+
+        dialSize = dialHeightRatio * $breakdown.height()
+
+        $.each(breakdown, (index, item) ->
+            # Colors
+            colors =langToColor[item.lang.toLowerCase()]
+
+            # Create blocks
+            $block = $("<div />").addClass("block").css(
+                "width": dialSize
+                "height": dialSize
+            )
+
+            # Create popup and expander
+            $expander = $("<div >").addClass("expander")
+            $popup = $("<div />").addClass("popup").append(
+                $("<div />").addClass("text").html(item.content).css(
+                    "border-color": colors.primary
+                    "background-color": colors.secondary
+                ).append(
+                    $("<div />").addClass("triangle-blank").css(
+                        "border-right-color": colors.secondary
+                    )
+                )
+            )
+
+            # Create text
+            $text = $("<div />").addClass("text").html(item.lang).append(
+                $("<span />").addClass("percent").html("<br>#{item.percent}%")
+            )
+            $block.append($text)
+
+
+            # Create dials
+            dial = new ProgressBar.Circle($block[0],
+                color: colors.primary
+                strokeWidth: 5
+                trailColor: colors.secondary
+                trailWidth: 5
+                fill: "white"
+                easing: "bounce"
+                duration: 2000
+            )
+
+            # Add hover event for block
+            isLast = index is breakdown.length - 1
+            $block.hover(
+                () ->
+                    popupFadeDelay = 0
+                    if not isLast
+                        $expander.velocity("stop").velocity({ width: "40%" }, 500, "ease-in-out")
+                        popupFadeDelay = 300
+                    $popup.velocity("stop").velocity("fadeIn",  
+                        delay: popupFadeDelay
+                        duration: 300 
+                        display: "inline-block"
+                    )
+                () ->
+                    if not isLast
+                        $expander.velocity("stop").velocity({ width: "0" }, 500, "ease-in-out")
+                    $popup.velocity("stop").velocity("fadeOut", 300)
+            )
+
+            # Save data for the dial
+            $block.data("percent", item.percent / 100)
+            $block.data("dial", dial)
+
+            # Append and animate
+            $breakdown.append($block, $popup, $expander)
+            dial.animate($block.data("percent"))
+        )
+
+        # Save data for content
+        $currentContent.data("hasDials", true)
+
+    $window.resize(resizeCodeDials)
+
+    #============================================================
+    # Text content shadows
+    #============================================================
+
+    updateTextShadows = () ->
+        $text = $currentContent.children(".text")
+        $fadeBefore = $text.children(".text-fade-before")
+        $fadeAfter = $text.children(".text-fade-after")
+
+        scrollTop = $text.scrollTop()
+        scrollHeight = $text[0].scrollHeight
+
+        $fadeAfter.css("top", scrollTop)
+        $fadeBefore.css("top", scrollTop)
+
+        if scrollTop > 5
+            $fadeBefore.show()
+        else
+            $fadeBefore.hide()
+
+        if $text.hasScrollBar().vertical and not (scrollHeight - scrollTop - $text.height() <= 1)
+            $fadeAfter.show()
+        else
+            $fadeAfter.hide()
+
+    $window.resize(() ->
+        updateTextShadows()
+    )
+
+    $experience.find(".content .text").scroll(updateTextShadows)
+
+    #============================================================
+    # Text Scrollbars
+    #============================================================
+
+    $experience.find(".content .text").each((index, text) ->
+        $(text).perfectScrollbar(
+            wheelPropagation: false
+            swipPropagation: false
+        )
+    ) 
 
     #============================================================
     # Timeline Buttons
@@ -87,11 +252,27 @@ $(window).load(() ->
     )
 
     # Click functionality
+    switchToItem = (id) ->
+        $nextContent = $experience.find("##{id}")
+        $currentContent.removeClass("selected")
+        $nextContent.addClass("selected")
+        $currentContent = $nextContent
+        updateTextShadows()
+        updateCodeDials()
+
+    switchToItem("introduction")
+
     $buttons.click(() ->
         $button = $(this)
-        $experience.find(".#{$button.data("id")}").addClass("selected")
+        switchToItem($(this).data("id"))
     )
 
-    
+    #============================================================
+    # Transition Eye Candy
+    #============================================================
 
+    animateIn = () ->
+        console.log("in")
+    
+    $experience.data("waypointIn", animateIn)
 )

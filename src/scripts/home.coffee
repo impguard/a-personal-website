@@ -5,9 +5,8 @@ $(() ->
     #============================================================
 
     $home = $("#home")
-    $window = $(window)
     $backgroundBlur = $home.find(".background-blur")
-    maxPercentage = 15
+    maxPercentage = 35
 
     #============================================================
     # Parallax Effect

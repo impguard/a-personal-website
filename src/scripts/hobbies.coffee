@@ -1,7 +1,6 @@
 $(() ->
 
     # Constants
-    $window = $(window)
     $hobbies = $("#hobbies")
     $container  = $hobbies.children(".container")
     $carousel = $container.children(".carousel")
@@ -98,6 +97,13 @@ $(() ->
     currDot = 0
     toggleDot = (num) ->
         dots.eq(num).toggleClass("selected")
+
+    selectDot  = (num) ->
+        if num is currDot or num >= dots.length
+            return false
+        toggleDot(currDot)
+        toggleDot(num)
+        currDot = num
 
     incrementDot = () ->
         nextDot = (currDot + 1) % numberOfDots

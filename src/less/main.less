@@ -25,7 +25,12 @@ a {
 #about, #experience, #hobbies, #contact {
     width: 100%; height: calc(100% - @navbarHeight);
     min-height: (600px - 85px);
-    padding-bottom: 50px;
+    padding-top: @navbarHeight;
+    padding-bottom: @navbarHeight;
+}
+
+#home, #about, #experience, #hobbies, #contact {
+    position: relative;
 }
 
 //============================================================
@@ -44,8 +49,8 @@ a {
     width: 100%; height: @navbarHeight;
     position: fixed;
     top: 0;
-    .color-transition();
-    z-index: 1;
+    .transition(background-color, 0.1s, linear);
+    z-index: 2;
 
     nav {
         position: absolute;
@@ -86,50 +91,12 @@ a {
 
 #home {
     position: relative;
-
-    // Background
-    .background, .background-blur {
-        width: 100%; height: 100%;
-        position: absolute;
-        top: 0; left: 0;
-        background-size: cover;   
-        background-position: center;
-
-        &::before, &::after {
-            box-sizing: border-box;
-            content: ""; 
-            position: absolute;
-            bottom: 0;
-            border-bottom: 9vh solid @about-theme;
-        }
-
-        &::before {
-            width: 53%;
-            left: 0;
-            border-right: 11vh solid transparent;
-        }
-
-        &::after {
-            width: 53%;
-            left: 47%;
-            border-left: 11vh solid transparent;
-        }
-    }
-    
-    .background {
-        background-image: url("../imgs/background.png");
-    }
-
-    .background-blur {
-        background-image: url("../imgs/background-blur.png");
-        opacity: 0;
-    }
+    background-color: @home-theme;
 
     // Title
     .title {
         position: absolute;
-        left: 80px;
-        bottom: calc(10vh + 40px);
+        left: 80px; bottom: 10%;
     }
 
     .name, .tagline {
@@ -156,84 +123,67 @@ a {
     background-color: @about-theme;
 
     .container {
-        box-sizing: border-box;
         width: 100%; height: 100%;
-        padding: 0 6%;
-        margin: 0 auto;
+        padding-bottom: @navbarHeight;
+        position: relative;
     }
 
-    .title {
-        height: 115px;
-        line-height: 1;
-        color: white;
-        font-size: 60px;
+    .wall {
+        width: 100%; height: 70%;
+        position: relative;
 
+        .counter {
+            position: absolute;
+            bottom: 0; left: 50%;
+            .translateX(-50%);
 
-        .first {
-            font-size: 100px;
-            font-weight: 700;
-        }
-    }
+            .portrait, .student, .hacker, .gamer {
+                display: none;
+            }
 
-    .content {
-        box-sizing: border-box;
-        width: 85%; height: calc(100% - 115px);
-
-        .student, .hacker, .gamer, .spacing {
-            display: inline-block;
-            height: 100%;
-            position: relative;
-
-            img {
+            .portrait {
                 position: absolute;
-                width: 100%;
+                top: 10px; left: 25%;
+                width: 14%;
             }
-        }
 
-        .spacing {
-            width: 7.5%;
-        }
-
-        .student {
-            width: 19%;
-
-            img {
-                top: 5%;  
-                max-height: 58%;  
+            .student, .hacker, .gamer {
+                position: absolute;
+                bottom: 0;
             }
-        }
 
-        .hacker {
-            width: 26%;
-            
-            img {
-                top: 27%;
-                max-height: 49%;
+            .student {
+                width: 10%;
+                left: 5%;
             }
-        }
 
-        .gamer {
-            width: 32%;
-            
-            img {
-                top: 55%;
-                max-height: 40%;
+            .hacker {
+                width: 20%;
+                left: 27%;
+            }
+
+            .gamer {
+                width: 35%;
+                left: 58%;
             }
         }
     }
 
-    // Handle Widescreens
-    @media only screen and (min-aspect-ratio: 2/1) {
-        .container {
-            max-width: 1400px;
+    .table {
+        width: 100%; height: 30%;
+        padding-bottom: @navbarHeight;
+        position: relative;
+        background-color: #605448;
+        overflow: hidden;
+
+        .top {
+            width: 100%; height: 28%;
+            background-color: #ae8a66;
         }
 
-        .content {
-            .student, .hacker, .gamer {
-                img {
-                    top: auto; bottom: 5%;
-                }
-            }
+        .shadow {
+            width: 100%; height: 37%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
         }
     }
 }
@@ -256,12 +206,12 @@ a {
         &:before {
             content: "";
             display: block;
-            height: 5%;
+            height: 1%;
         }
         
         .timeline, .spacing, .content {
             box-sizing: border-box;
-            height: 90%;
+            height: 98%;
         }
 
         .timeline, .spacing {
@@ -281,9 +231,8 @@ a {
             }
 
             .item {
-                width: 100%; height: 10%;
+                width: 100%;
                 position: absolute;
-                top: 50%;
 
                 .duration {
                     width: 20%; height: 100%;
@@ -352,6 +301,14 @@ a {
             .title, .date {
                 height: 80px;
                 line-height: 1;
+
+                a {
+                    color: black;
+
+                    &:hover {
+                        color: blue;
+                    }
+                }
             }
             
             .date .strong, .title .strong {
@@ -370,9 +327,120 @@ a {
             }
 
             .text {
-                box-sizing: border-box;
                 height: 60%;
-                overflow-y: scroll;
+                position: relative;
+                overflow: hidden;
+
+                .text-fade-before, .text-fade-after {
+                    display: none;
+                    width: 100%; height: calc(100% + 1px);
+                    position: absolute;
+                    top: 0; left: 0;
+                }
+
+                .text-fade-before {
+                    background: linear-gradient(to bottom, 
+                        @experience-theme 0%, 
+                        @experience-theme-transparent 15%);
+                }
+
+                .text-fade-after {
+                    background: linear-gradient(to top, 
+                        @experience-theme 0%, 
+                        @experience-theme-transparent 15%);
+                }
+            }
+
+            .breakdown {
+                box-sizing: border-box;
+                height: calc(40% - 80px);
+                position: relative;
+                overflow: hidden;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    height: 7%;
+                }
+
+                .block {
+                    display: inline-block;
+                    position: relative;
+
+                    .text {
+                        width: auto; height: auto;
+                        position: absolute;
+                        top: 50%; left: 50%;
+                        .translate(-50%, -50%);
+                        text-align: center;
+                        color: black;
+                        font-size: 24px;
+
+                        .percent {
+                            font-size: 18px;
+                        }
+                    }
+
+                    svg {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                .expander {
+                    display: inline-block;
+                    height: 93%; width: 0;
+                    margin-right: 5%;
+                    margin-left: 2%;
+                    position: relative;
+                }
+
+                .popup {
+                    // display: none;
+                    height: 93%; width: 40%;
+                    margin-right: 5%;
+                    margin-left: 2%;
+                    position: absolute;
+
+                    .text {
+                        box-sizing: border-box;
+                        width: 90%; height: auto;
+                        max-height: 100%;
+                        padding: 3% 4% 3%;
+                        position: absolute;
+                        top: 50%; left: 50%;
+                        .translate(-50%, -50%);
+                        border-width: 2px;
+                        border-style: solid;
+                        border-radius: 15px;
+                        font-size: 18px;
+                        overflow: visible;
+
+                        &::before {
+                            content: "";
+                            width: 0; height: 0;
+                            border-right-width: 10px;
+                            border-right-style: solid;
+                            border-right-color: inherit;
+                            border-top: 10px solid transparent;
+                            border-bottom: 10px solid transparent;
+                            position: absolute;
+                            left: -12px; top: 50%;
+                            .translateY(-50%);
+                        }
+
+                        .triangle-blank {
+                            width: 0; height: 0;
+                            border-right-width: 10px;
+                            border-right-style: solid;
+                            border-top: 10px solid transparent;
+                            border-bottom: 10px solid transparent;
+                            position: absolute;
+                            left: -9px; top: 50%;
+                            .translateY(-50%);
+                        }
+                    }
+                }
             }
         }
     }
@@ -446,6 +514,7 @@ a {
                     top: 0; left: 0;
                     width: 100%; height: 100%;
                     border: 10px solid @hobbies-dark;
+                    background-color: #d2d6d9;
 
                     img {
                         display: block;
@@ -488,15 +557,77 @@ a {
     
         // Cube Transformations
         .carousel {
-            perspective: 800px;
+            .perspective(800px);
 
             .cube {
-                transform-style: preserve-3d;
+                .transform-style(preserve-3d);
 
                 > div {
-                    backface-visibility: hidden;
+                    .backface-visibility(hidden);
                 }
             }
         }
+    }
+}
+
+//============================================================
+// Contact
+//============================================================
+
+#contact {
+    position: relative;
+    padding-bottom: 0;
+
+    .container {
+        position: absolute;
+        top: 50%; left: 50%;
+        .translate(-50%, -50%);
+        text-align: center;
+        color: white;
+    }
+
+    .title {
+        font-size: 60px;
+    }
+
+    .email {
+        font-size: 36px;
+        color: white;
+    }
+
+    .sources {
+        margin: 0 auto;
+
+        > div {
+            display: inline-block;
+            height: 100px; width: 100px;
+            margin-right: 40px;
+            position: relative;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            img {
+                height: 100%;
+                position: absolute;
+                left: 50%; top: 50%;
+                .translate(-50%, -50%);
+                cursor: pointer;
+
+                &:hover {
+                    height: 110%;
+                }
+            }
+        }
+    }
+
+    .footer {
+        width: 100%;
+        position: absolute;
+        bottom: 1%;
+        text-align: center;
+        font-size: 12px;
+        color: white;
     }
 }

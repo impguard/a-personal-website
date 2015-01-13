@@ -4,9 +4,6 @@
             "name": "Timeline",
             "id": "introduction",
             "time": "",
-            "endDate": null,
-            "duration": null,
-            "type": null,
             "content": "timeline.txt"
         },
         {
@@ -16,7 +13,21 @@
             "endDate": "8-1-2013",
             "duration": 10,
             "type": "project",
-            "content": "skirmish.txt"
+            "github": "http://www.github.com",
+            "website": "http://www.google.com",
+            "content": "skirmish.txt",
+            "breakdown": [
+                {
+                    "lang": "C++",
+                    "percent": 50,
+                    "content": "skirmish-c++.txt"
+                },
+                {
+                    "lang": "Java",
+                    "percent": 50,
+                    "content": "skirmish-java.txt"
+                }
+            ]
         },
         {
             "name": "Instaparse",
@@ -25,6 +36,8 @@
             "endDate": "12-1-2014",
             "duration": 2,
             "type": "project",
+            "github": "http://www.github.com",
+            "website": "http://www.google.com",
             "content": "instaparse.txt"
         },
         {
@@ -34,6 +47,7 @@
             "endDate": "8-10-2014",
             "duration": 3,
             "type": "internship",
+            "website": "http://www.google.com",
             "content": "microsoft.txt"
         },
         {
@@ -43,7 +57,22 @@
             "endDate": "3-5-2014",
             "duration": 0,
             "type": "project",
-            "content": "tron.txt"
+            "github": "http://www.github.com",
+            "website": "http://www.google.com",
+            "content": "tron.txt",
+            "breakdown": [
+                {
+                    "lang": "TS",
+                    "percent": 70,
+                    "content": "tron-ts.txt"
+                },
+                {
+                    "lang": "JS",
+                    "percent": 30,
+                    "content": "tron-js.txt"
+                }
+
+            ]
         }
     ],
 

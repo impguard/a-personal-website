@@ -1,4 +1,4 @@
-$(() ->
+$window.load(() ->
 
     #============================================================
     # Constants
@@ -16,6 +16,10 @@ $(() ->
     #============================================================
     # Handle Nav Events
     #============================================================
+
+    customHandlerIn = (waypoint) ->
+        handlerIn = $(waypoint.element).data("waypointIn")
+        if handlerIn? then handlerIn(waypoint)
 
     createHandler = ($link, themeClass, darkClass, textColor) ->
         $selector = $link.children(".selector")
@@ -37,8 +41,8 @@ $(() ->
                 $selector.velocity({ top: "0" }, 200)
                 $currentSelector = $selector
             else
-                # call previous links callback when scrolling up
                 if this.previous()?
+                    # call previous links callback when scrolling up
                     this.previous().callback("down")
 
 
@@ -55,11 +59,23 @@ $(() ->
         else
             $id.waypoint(createHandler($link, themeClass, darkClass, "white"), options)
 
-        # Handle link click transition
-        $link.click(() ->
-            # Magic number to scroll slightly over
-            $id.velocity("scroll", { duration: 600, offset: -navbarHeight + 5 })
-        )
+        # Trigger custom waypoint handlers
+        options = { offset: "85px", continuous: false, group: "customHandlers" }
+        $id.waypoint((direction) ->
+            if direction is "down"
+                customHandlerIn(this)
+            else
+                if this.previous()? then customHandlerIn(this.previous())
+        , options)
+
+        # Handle link click and page click transition
+        scrollToId = () ->
+            offset = if $link.attr("id") is "home-link" then 0 else 5
+            # Offset to scroll over padding at the top of each page
+            $id.velocity("scroll", { duration: 600, offset: offset })
+
+        $link.click(scrollToId)
+        $id.click(scrollToId)
 
         # Handle link hover text color and selectors
         $selector = $link.children(".selector")
@@ -71,8 +87,7 @@ $(() ->
             () ->
                 $a.css("color", "inherit")
                 if $selector[0] isnt $currentSelector[0]
-                    $selector.velocity("stop").velocity({ top: "-#{navbarHeight}px" }, 200)
-                    
+                    $selector.velocity("stop").velocity({ top: "-#{navbarHeight}px" }, 200)            
         )
     )
 )
