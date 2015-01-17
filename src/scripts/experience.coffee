@@ -33,6 +33,7 @@ $window.load(() ->
 
     # Current content being displayed
     $currentContent = $()
+    $currentButton = $()
 
     #============================================================
     # Code dials
@@ -40,40 +41,59 @@ $window.load(() ->
 
     dialHeightRatio = 0.9
 
+    # Save global content with each breakdown
     $.each(window.exports.experience, (index, item) -> 
         $("##{item.id}").data("breakdown", item.breakdown)
     )
 
+    # Hide dial for a particular content
+    hideCodeDials = ($content) ->
+        $breakdown = $content.children(".breakdown")
+        $breakdown.children(".block").css({ display: "none" })
+
+    # Resize current content code dials
     resizeCodeDials = () ->
         $breakdown = $currentContent.children(".breakdown")
         dialSize = dialHeightRatio * $breakdown.height()
         $breakdown.children(".block").width(dialSize).height(dialSize)
 
+    # Updates current content code dials, adding them if they don't exist
     updateCodeDials = () ->
         breakdown = $currentContent.data("breakdown")
         if not breakdown?
             return
 
         $breakdown = $currentContent.children(".breakdown")
-        if $currentContent.data("hasDials")
+
+        # Helper to animate dials
+        showDials = () ->
             $breakdown.children(".block").each((index, block) ->
                 $block = $(block)
                 dial = $block.data("dial")
                 percent = $block.data("percent")
 
                 dial.set(0)
-                dial.animate($block.data("percent"))
+                $block.velocity("fadeIn",
+                    display: "inline-block"
+                    complete: () ->
+                        dial.animate(percent)
+                )
             )
+
+        # If dials already added, simply show them
+        if $currentContent.data("hasDials")
+            showDials()
             return
 
+        # Create Dials
         dialSize = dialHeightRatio * $breakdown.height()
-
         $.each(breakdown, (index, item) ->
             # Colors
             colors =langToColor[item.lang.toLowerCase()]
 
             # Create blocks
             $block = $("<div />").addClass("block").css(
+                "display": "none"
                 "width": dialSize
                 "height": dialSize
             )
@@ -132,30 +152,29 @@ $window.load(() ->
             $block.data("percent", item.percent / 100)
             $block.data("dial", dial)
 
-            # Append and animate
+            # Append
             $breakdown.append($block, $popup, $expander)
-            dial.animate($block.data("percent"))
         )
+        
+        # Show dials
+        showDials()
 
-        # Save data for content
+        # Note that dials have been added
         $currentContent.data("hasDials", true)
-
-    $window.resize(resizeCodeDials)
 
     #============================================================
     # Text content shadows
     #============================================================
 
+    # Update current content text shadows
     updateTextShadows = () ->
-        $text = $currentContent.children(".text")
-        $fadeBefore = $text.children(".text-fade-before")
-        $fadeAfter = $text.children(".text-fade-after")
+        $wrapperText = $currentContent.children(".text")
+        $text = $wrapperText.children(".actual-text")
+        $fadeBefore = $wrapperText.children(".text-fade-before")
+        $fadeAfter = $wrapperText.children(".text-fade-after")
 
         scrollTop = $text.scrollTop()
         scrollHeight = $text[0].scrollHeight
-
-        $fadeAfter.css("top", scrollTop)
-        $fadeBefore.css("top", scrollTop)
 
         if scrollTop > 5
             $fadeBefore.show()
@@ -167,22 +186,21 @@ $window.load(() ->
         else
             $fadeAfter.hide()
 
-    $window.resize(() ->
-        updateTextShadows()
-    )
-
-    $experience.find(".content .text").scroll(updateTextShadows)
-
     #============================================================
     # Text Scrollbars
     #============================================================
 
-    $experience.find(".content .text").each((index, text) ->
+    $experience.find(".content .text .actual-text").each((index, text) ->
         $(text).perfectScrollbar(
             wheelPropagation: false
-            swipPropagation: false
+            swipePropagation: true
+            suppressScrollX: true
         )
-    ) 
+    )
+
+    $experience.find(".content .text .actual-text").resize(() ->
+        $(this).perfectScrollbar("update")
+    )
 
     #============================================================
     # Timeline Buttons
@@ -193,7 +211,7 @@ $window.load(() ->
     colorChoice = 0
     $.each(window.exports.experience, (index, item) ->
         # Calculate position and height
-        height = item.duration * 30 / totalDays * 100
+        height = (item.duration + 1) * 30 / totalDays * 100
         position = Date.daysInBetween(startDate, new Date(item.endDate)) / totalDays * 100 - height / 2
 
         # Color choice
@@ -207,7 +225,6 @@ $window.load(() ->
             imageSRC = "imgs/internship-#{colors[colorChoice]}.svg"
 
         # Create individual elements
-        $duration = $("<div />").addClass("duration").css("background-color", color)
         $connector = $("<div />")
             .addClass("connector")
             .css("background-color", color)
@@ -218,61 +235,111 @@ $window.load(() ->
                 $("<div />").addClass("name").html(item.name).css("color", colors[colorChoice])
                 $("<img />").addClass(item.type).attr({ src: imageSRC, alt: item.type })
             )
-            .data("id", item.id)
+        $extension = $("<div />")
+            .addClass("extension")
+            .append($connector, $button)
 
         $item = $("<div />")
             .addClass("item")
-            .append($duration, $connector, $button)
-            .css({ top: "#{position}%", height: "#{height}%" })
+            .append($extension)
+            .css(
+                "top": "#{position}%" 
+                "height": "#{height}%" 
+                "background-color": color
+            )
+
+        # Save data
+        $button.data("id", item.id)
+        $button.data("$item", $item)
+        $button.data("color", color)
 
         $item.appendTo($timeline)
     )
 
+    #============================================================
+    # Timline content API
+    #============================================================
+
+    # Click functionality
+    animateInContent = () ->
+        $currentContent.css("display", "block")
+        updateTextShadows()
+        $currentContent.velocity("stop").velocity("transition.slideRightBigIn", 
+            duration: 600
+            complete: () ->
+                $currentContent.css("transform", "none")
+                updateCodeDials()
+        )
+
+    switchToItem = (id) ->
+        $nextContent = $experience.find("##{id}")
+
+        if $currentContent.length is 0
+            $currentContent = $nextContent
+            animateInContent($nextContent)
+            return
+
+
+        $currentContent.velocity("stop").velocity("transition.slideRightBigOut",
+            duration: 600
+            complete: () ->
+                hideCodeDials($currentContent)
+                $currentContent = $nextContent
+                animateInContent()
+        )
+
+    #============================================================
+    # Event Handlers
+    #============================================================
+
     $buttons = $experience.find(".timeline .item .button")
     originalButtonWidth = $buttons.width()
 
-    # Save width of each button
-    $buttons.each(() ->
-        $button = $(this)
-        $button.data("expandedWidth", $button.children(".name").outerWidth() + originalButtonWidth)
-    )
+    # Helper to set the color of an item
+    selectedColor = "#FF7F35"
+    setItemColor = ($item, color) ->
+        $item.css("background-color", color)
+        $item.find(".connector").css("background-color", color)
+        $item.find(".button").css("border-color", color)
 
-    # Hover functionality
-    $buttons.hover(
-        () ->
-            $button = $(this)
-            $name = $button.children(".name")
-            $button.velocity("stop").velocity({ width: $button.data("expandedWidth") }, 200)
-            $name.velocity("stop").velocity("fadeIn", { delay: 100, duration: 200 })
-        () ->
-            $button = $(this)
-            $name = $button.children(".name")
-            $button.velocity("stop").velocity({ width: originalButtonWidth }, 200)
-            $name.velocity("stop").velocity("fadeOut", { duration: 100 })
-    )
+    setupEventHandlers = () ->
+        # Button clicks
+        $buttons.click(() ->
+            if $currentButton.length != 0
+                $currentButton.removeClass("selected")
+                setItemColor($currentButton.data("$item"), $currentButton.data("color"))
 
-    # Click functionality
-    switchToItem = (id) ->
-        $nextContent = $experience.find("##{id}")
-        $currentContent.removeClass("selected")
-        $nextContent.addClass("selected")
-        $currentContent = $nextContent
-        updateTextShadows()
-        updateCodeDials()
+            $currentButton = $(this)
+            $currentButton.addClass("selected")
+            setItemColor($currentButton.data("$item"), selectedColor)
+            switchToItem($currentButton.data("id"))
+        )
 
-    switchToItem("introduction")
+        # Text shadows
+        $window.resize(() ->
+            updateTextShadows()
+        )
 
-    $buttons.click(() ->
-        $button = $(this)
-        switchToItem($(this).data("id"))
-    )
+        $experience.find(".content .text .actual-text").scroll(updateTextShadows)
+
+        # Code dials
+        $window.resize(resizeCodeDials)
 
     #============================================================
     # Transition Eye Candy
     #============================================================
 
-    animateIn = () ->
-        console.log("in")
+    $items = $timeline.find(".item")
+    $extensions = $timeline.find(".extension")
+    animateIn = (waypoint) ->
+        $timeline.velocity("transition.slideLeftIn", 500, () ->
+            $items.velocity("transition.fadeIn", { stagger: 60, drag: true, complete: () ->
+                $extensions.velocity("transition.flipYIn", { stagger: 60, drag: true, complete: () ->
+                    setupEventHandlers()
+                })
+            })
+        )
+        switchToItem("introduction")
     
-    $experience.data("waypointIn", animateIn)
+    $experience.data("transitionIn", animateIn)
 )

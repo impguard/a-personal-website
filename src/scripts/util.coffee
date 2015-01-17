@@ -14,3 +14,19 @@ do ($) ->
         hasScrollBar.vertical = e.scrollHeight > e.clientHeight
         hasScrollBar.horizontal = e.scrollWidth > e.clientWidth
         return hasScrollBar
+
+# Initial Setup
+
+# Register custom effects
+$.Velocity.RegisterEffect("transition.cubeIn",
+    defaultDuration: 1400
+    calls: [
+        [ { opacity: [ 1, 0 ], transformOriginX: [ "100%", "100%" ], transformOriginY: [ 0, 0 ], rotateX: [ 0, 180 ], rotateY: [0, 180] } ]
+    ]
+    reset: { transformOriginX: "50%", transformOriginY: "50%" }
+)
+
+# FastClick
+$(() ->
+    FastClick.attach(document.body);
+)

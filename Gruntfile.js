@@ -9,6 +9,13 @@ buildDir = "buildfiles";
 buildDataObject = function(from, to) {
   jadeObj = JSON.parse(fs.readFileSync(path.join(buildDir, "data.json"), "utf8"));
 
+  // Object page
+  _.each(jadeObj.about, function(value, key, list) {
+    // Read content from files
+    filename = value;
+    list[key] = fs.readFileSync(path.join(buildDir, filename), "utf8");
+  });
+
   // Experience page
   jadeObj.globals.experience = [];
 

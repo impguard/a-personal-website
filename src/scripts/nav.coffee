@@ -17,11 +17,8 @@ $window.load(() ->
     # Handle Nav Events
     #============================================================
 
-    customHandlerIn = (waypoint) ->
-        handlerIn = $(waypoint.element).data("waypointIn")
-        if handlerIn? then handlerIn(waypoint)
-
-    createHandler = ($link, themeClass, darkClass, textColor) ->
+    # Helper to create handler for navbar
+    createNavHandler = ($link, themeClass, darkClass, textColor) ->
         $selector = $link.children(".selector")
         return (direction) ->
             if direction is "down"
@@ -45,6 +42,16 @@ $window.load(() ->
                     # call previous links callback when scrolling up
                     this.previous().callback("down")
 
+    # Helper to handle transition into each page
+    transitionInHandler = (waypoint) ->
+        $element = $(waypoint.element)
+        if $element.data("hasTransitionIn")?
+            waypoint.destroy()
+            return
+
+        handlerIn = $element.data("transitionIn")
+        if handlerIn? then handlerIn()
+        $element.data("hasTransitionIn", true)
 
     $.each(["home", "about", "experience", "hobbies", "contact"], (index, name) ->
         $id = $("##{name}")
@@ -52,21 +59,31 @@ $window.load(() ->
         themeClass = name + "-theme"
         darkClass = name + "-dark"
 
-        # Handle waypoints
+        # Handle navbar waypoints
         options = { offset: "85px", continuous: false, group: "nav" }
         if name is "experience"
-            $id.waypoint(createHandler($link, themeClass, darkClass, "black"), options)
+            $id.waypoint(createNavHandler($link, themeClass, darkClass, "black"), options)
         else
-            $id.waypoint(createHandler($link, themeClass, darkClass, "white"), options)
+            $id.waypoint(createNavHandler($link, themeClass, darkClass, "white"), options)
 
-        # Trigger custom waypoint handlers
-        options = { offset: "85px", continuous: false, group: "customHandlers" }
-        $id.waypoint((direction) ->
+        # Handle page transition in handlers
+        optionsTop = { offset: "85px", continuous: false, group: "transitionIn" }
+        optionsBottom = 
+            offset: () ->
+                -$(this.element).outerHeight() + 86
+            continuous: false
+            group: "transitionIn"
+
+
+        topWaypoint = $id.waypoint((direction) ->
             if direction is "down"
-                customHandlerIn(this)
-            else
-                if this.previous()? then customHandlerIn(this.previous())
-        , options)
+                transitionInHandler(this)
+        , optionsTop)
+
+        bottomWaypoint = $id.waypoint((direction) ->
+            if direction is "up"
+                transitionInHandler(this)
+        , optionsBottom)
 
         # Handle link click and page click transition
         scrollToId = () ->

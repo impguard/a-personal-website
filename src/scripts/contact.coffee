@@ -24,5 +24,20 @@ $(() ->
 
     $github.click(() -> window.open("https://github.com/ImpGuard", "_blank"))
     $linkedin.click(() -> window.open("https://linkedin.com/in/impguard", "_blank"))
-    # $resume.click()
+    $resume.click(() -> window.open("imgs/resume.pdf", "_blank"))
+
+    #============================================================
+    # Transition Eye Candy
+    #============================================================
+
+    $text = $contact.find(".title, .email")
+    $icons = $contact.find(".github, .linkedin, .resume")
+    animateIn = (waypoint) ->
+        $text.velocity("transition.expandIn",
+            complete: () ->
+                $text.css("transform", "")
+        )
+        $icons.velocity("transition.shrinkIn", { display: "inline-block" })
+    
+    $contact.data("transitionIn", animateIn)
 )

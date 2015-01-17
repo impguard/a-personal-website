@@ -12,6 +12,7 @@ $(() ->
     ]
     $dots = $container.find(".dots")
     $title = $container.children(".title")
+    
     $prev = $carousel.children(".prev")
     $next = $carousel.children(".next")
 
@@ -33,7 +34,7 @@ $(() ->
     currFace = 0
     # Helper functions to switch faces
     switchToFace = (transitionTime = 750) ->
-        $cube.velocity($faces[currFace].data("transition"), transitionTime, "ease-in-out")
+        $cube.velocity("stop").velocity($faces[currFace].data("transition"), transitionTime, "ease-in-out")
 
     # Dynamically adjust cube transforms
     resizeCube = () ->
@@ -122,19 +123,36 @@ $(() ->
     $window.resize(resizeDots)
 
     #============================================================
-    # Selection logic
+    # Event Handlers
     #============================================================
 
-    $prev.click(() ->
-        decrementDot()
-        currFace = (6 + (currFace - 1)) % 6
-        switchToFace()
-    )
+    createEventHandlers = () ->
+        $prev.click(() ->
+            decrementDot()
+            currFace = (6 + (currFace - 1)) % 6
+            switchToFace()
+        )
 
-    $next.click(() ->
-        incrementDot()
-        currFace = (currFace + 1) % 6
-        switchToFace()
-    )
+        $next.click(() ->
+            incrementDot()
+            currFace = (currFace + 1) % 6
+            switchToFace()
+        )
 
+    #============================================================
+    # Transition Eye Candy
+    #============================================================
+
+    $arrows = $hobbies.find(".prev, .next")
+    $dot = $dots.children(".dot")
+    animateIn = (waypoint) ->
+        $cube.velocity("transition.cubeIn", () ->
+            # Fix for mobile Safari, velocity does not work
+            $arrows.animate({ opacity: 1 }, 500)
+            $dot.velocity("transition.fadeIn", { display: "inline-block" })
+            $title.velocity("transition.fadeIn")
+            createEventHandlers()
+        )
+    
+    $hobbies.data("transitionIn", animateIn)
 )

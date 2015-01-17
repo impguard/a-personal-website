@@ -30,6 +30,14 @@ block content
           img.student(src="imgs/backpack.svg", alt="Student")
           img.hacker(src="imgs/laptop.svg", alt="Hacker")
           img.gamer(src="imgs/desktop.svg", alt="Gamer")
+          each val, key in about
+            div(class=key + "-content content")
+              .arrow
+              img.cancel(src="imgs/cancel.svg", alt="Cancel")
+              .text
+                .actual-text= val
+                .text-fade-before
+                .text-fade-after
       .table
         .top
         .shadow
@@ -49,7 +57,8 @@ block content
               &nbsp;&middot;&nbsp;
             if project.website
               a(href=project.website, target="_blank") website
-          .text= project.content
+          .text
+            .actual-text= project.content
             .text-fade-before
             .text-fade-after
           .breakdown
@@ -84,4 +93,4 @@ block content
         .resume
           img(src="imgs/resume.svg", alt="Resume")
     .footer Copyright &copy; 2015 - Kevin Wu
-  
+

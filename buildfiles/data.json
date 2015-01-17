@@ -1,4 +1,10 @@
 {
+    "about": {
+        "portrait": "portrait.txt",
+        "student": "student.txt",
+        "hacker": "hacker.txt",
+        "gamer": "gamer.txt"
+    },
     "experience": [
         {
             "name": "Timeline",
