@@ -151,7 +151,8 @@ $(() ->
 
         # Text shadows
         $window.resize(() ->
-            updateTextShadows()
+            if $currentButton.length isnt 0
+                updateTextShadows()
         )
 
         $counter.children(".content").children(".text").children(".actual-text").scroll(updateTextShadows)

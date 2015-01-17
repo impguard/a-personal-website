@@ -332,6 +332,7 @@ $window.load(() ->
     $items = $timeline.find(".item")
     $extensions = $timeline.find(".extension")
     animateIn = (waypoint) ->
+        switchToItem("introduction")
         $timeline.velocity("transition.slideLeftIn", 500, () ->
             $items.velocity("transition.fadeIn", { stagger: 60, drag: true, complete: () ->
                 $extensions.velocity("transition.flipYIn", { stagger: 60, drag: true, complete: () ->
@@ -339,7 +340,6 @@ $window.load(() ->
                 })
             })
         )
-        switchToItem("introduction")
     
     $experience.data("transitionIn", animateIn)
 )
