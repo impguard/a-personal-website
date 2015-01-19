@@ -14,17 +14,20 @@ $window.load(() ->
     # Fill in later
     langToColor = {
         "c++": 
-            "secondary": "gray"
-            "primary": "black"
+            "primary": "#3FA9F5"
+            "secondary": "#B2DDFB"
         "java":
-            "secondary": "gray"
-            "primary": "orange"
-        "ts":
-            "secondary": "gray"
+            "primary": "#7AC943"
+            "secondary": "#CAE9B4"
+        "python":
             "primary": "red"
-        "js":
             "secondary": "gray"
+        "ts":
+            "primary": "red"
+            "secondary": "gray"
+        "js":
             "primary": "purple"
+            "secondary": "gray"
     }
 
     #============================================================
@@ -67,6 +70,7 @@ $window.load(() ->
 
         # Helper to animate dials
         showDials = () ->
+            resizeCodeDials()
             $breakdown.children(".block").each((index, block) ->
                 $block = $(block)
                 dial = $block.data("dial")

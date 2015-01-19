@@ -10,6 +10,7 @@ $(() ->
     $shadow = $table.children(".shadow")
     $buttons = $counter.children(".portrait, .student, .hacker, .gamer")
     $contents = $counter.children(".content")
+    $wrappers = $contents.children(".wrapper")
 
     #============================================================
     # Experience Page State
@@ -45,7 +46,7 @@ $(() ->
     # Style content arrows
     #============================================================
 
-    styleContentArrows = () ->
+    updateContentArrows = () ->
         $.each(["student", "hacker", "gamer"], (index, name) ->
             position = $counter.children(".#{name}").height() / 2
             $counter.children(".#{name}-content").children(".arrow").css("bottom", position)
@@ -58,7 +59,7 @@ $(() ->
     # Content scrollbars
     #============================================================
 
-    $contents.children(".text").children(".actual-text").each((index, text) ->
+    $wrappers.children(".text").children(".actual-text").each((index, text) ->
         $(text).perfectScrollbar(
             wheelPropagation: false
             swipePropagation: true
@@ -66,9 +67,31 @@ $(() ->
         )
     )
 
-    $contents.children(".text").children(".actual-text").resize(() ->
+    $wrappers.children(".text").children(".actual-text").resize(() ->
         $(this).perfectScrollbar("update")
     )
+
+    #============================================================
+    # Content sizing
+    #============================================================    
+
+    # HACKHACK for Chrome
+    $contents.show().hide()
+
+    # Update current content sizes
+    updateContentSize = () ->
+        $content = $currentButton.data("$content")
+        $wrapper = $content.children(".wrapper")
+        $text = $wrapper.children(".text")
+        $actualText = $text.children(".actual-text").css("height", "auto")
+
+        wallHeight = $wall.height() - 100
+        textHeight = $text.height()
+
+        $wrapper.children(".cancel").height(wallHeight * 0.09)
+        $wrapper.children(".padding").height(wallHeight * 0.01)
+        $actualText.height(Math.min(textHeight, wallHeight * 0.9))
+        $actualText.perfectScrollbar("update")
 
     #============================================================
     # Content text shadows
@@ -76,7 +99,7 @@ $(() ->
 
     # Update current content text shadows
     updateTextShadows = () ->
-        $wrapperText = $currentButton.data("$content").children(".text")
+        $wrapperText = $currentButton.data("$content").children(".wrapper").children(".text")
         $text = $wrapperText.children(".actual-text")
         $fadeBefore = $wrapperText.children(".text-fade-before")
         $fadeAfter = $wrapperText.children(".text-fade-after")
@@ -114,7 +137,8 @@ $(() ->
             easing: "ease-in-out"
             complete: () ->
                 $currentButton = $button
-                $button.data("$content").css("display", "block")
+                $button.data("$content").show()
+                updateContentSize()
                 updateTextShadows()
                 $button.data("$content").velocity("transition.fadeIn")
         )
@@ -144,20 +168,22 @@ $(() ->
             selectContent($(this))
         )
 
-        # Click cancel button on content
-        $contents.children(".cancel").click(() ->
+        # Click cancel button on content wrapper
+        $wrappers.children(".cancel").click(() ->
             hideContent()
         )
 
-        # Text shadows
+        # Resize event
         $window.resize(() ->
+            # Fix content arrows
+            updateContentArrows()
             if $currentButton.length isnt 0
+                # Update content sizes and text shadows if currently shown
+                updateContentSize()
                 updateTextShadows()
         )
 
-        $counter.children(".content").children(".text").children(".actual-text").scroll(updateTextShadows)
-
-        
+        $wrappers.children(".text").children(".actual-text").scroll(updateTextShadows)
 
     #============================================================
     # Transition Eye Candy
@@ -169,10 +195,9 @@ $(() ->
             stagger: 100
             drag: true
             complete: () ->
-                styleContentArrows()
+                updateContentArrows()
                 setupEventHandlers()
         )
-
     
     $about.data("transitionIn", animateIn)
 )

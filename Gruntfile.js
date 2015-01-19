@@ -116,7 +116,7 @@ module.exports = function(grunt) {
     },
     watch: {
       jade: {
-        files: "src/jade/*.jade",
+        files: ["src/jade/*.jade", "buildfiles/*"],
         tasks: "jade"
       },
       less: {

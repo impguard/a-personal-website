@@ -33,11 +33,14 @@ block content
           each val, key in about
             div(class=key + "-content content")
               .arrow
-              img.cancel(src="imgs/cancel.svg", alt="Cancel")
-              .text
-                .actual-text= val
-                .text-fade-before
-                .text-fade-after
+              .wrapper
+                img.cancel(src="imgs/cancel.svg", alt="Cancel")
+                .padding
+                .text
+                  .actual-text!= val
+                  .text-fade-before
+                  .text-fade-after
+              
       .table
         .top
         .shadow
