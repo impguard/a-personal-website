@@ -18,6 +18,10 @@ $(() ->
 
     # Current button that is selected
     $currentButton = $()
+    # Whether user has clicked a button yet
+    hasClicked = false
+    # Array of timeout ids for the initial callouts
+    calloutIDs = []
 
     #============================================================
     # Set counter width
@@ -42,18 +46,6 @@ $(() ->
     resizeTableShadow()
     $window.resize(resizeTableShadow)
 
-    #============================================================
-    # Style content arrows
-    #============================================================
-
-    updateContentArrows = () ->
-        $.each(["student", "hacker", "gamer"], (index, name) ->
-            position = $counter.children(".#{name}").height() / 2
-            $counter.children(".#{name}-content").children(".arrow").css("bottom", position)
-        )
-
-        position = $counter.children(".portrait").height() / 2
-        $counter.children(".portrait-content").children(".arrow").css("top", position)
 
     #============================================================
     # Content scrollbars
@@ -70,6 +62,19 @@ $(() ->
     $wrappers.children(".text").children(".actual-text").resize(() ->
         $(this).perfectScrollbar("update")
     )
+
+    #============================================================
+    # Style content arrows
+    #============================================================
+
+    updateContentArrows = () ->
+        $.each(["student", "hacker", "gamer"], (index, name) ->
+            position = $counter.children(".#{name}").height() / 2
+            $counter.children(".#{name}-content").children(".arrow").css("bottom", position)
+        )
+
+        position = $counter.children(".portrait").height() / 2
+        $counter.children(".portrait-content").children(".arrow").css("top", position)
 
     #============================================================
     # Content sizing
@@ -139,6 +144,7 @@ $(() ->
                 $currentButton = $button
                 $button.data("$content").show()
                 updateContentSize()
+                updateContentArrows()
                 updateTextShadows()
                 $button.data("$content").velocity("transition.fadeIn")
         )
@@ -159,12 +165,23 @@ $(() ->
         )
 
     #============================================================
+    # Callout Eye Candy
+    #============================================================
+
+    setupCallouts = () ->
+        if hasClicked then return
+        $buttons.velocity("callout.swing", { stagger: 1000 })
+
+    #============================================================
     # Event Handlers
     #============================================================    
 
     setupEventHandlers = () ->
         # Click buttons
         $buttons.click(() ->
+            if not hasClicked
+                hasClicked = true
+                $buttons.velocity("stop", true).velocity({ rotateZ: 0 }, 200)
             selectContent($(this))
         )
 
@@ -175,11 +192,10 @@ $(() ->
 
         # Resize event
         $window.resize(() ->
-            # Fix content arrows
-            updateContentArrows()
             if $currentButton.length isnt 0
-                # Update content sizes and text shadows if currently shown
+                # Update content sizes, arrows, and text shadows if currently shown
                 updateContentSize()
+                updateContentArrows()
                 updateTextShadows()
         )
 
@@ -195,7 +211,7 @@ $(() ->
             stagger: 100
             drag: true
             complete: () ->
-                updateContentArrows()
+                setupCallouts()
                 setupEventHandlers()
         )
     
