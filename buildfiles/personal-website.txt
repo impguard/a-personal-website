@@ -1,0 +1,5 @@
+Building this personal website was a great learning experience and a lot of fun. I used many tools that I had experience in including a clean Grunt build system, Coffeescript, Jade, and LESS to produce a modular website that had a clear separation between design and content. I worked with several libraries, including Velocity.js for general animations, Vivus.js for the awesome drawing effect, and several JQuery plugins for various other elements.
+
+<br><br>
+
+I designed the entire website (twice!) using mainly Adobe Illustrator and most of the graphics were custom made or tweaked from online resources. The entire process took around 3 weeks and works well on every browser and most tablets.

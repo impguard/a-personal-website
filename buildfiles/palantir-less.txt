@@ -1,0 +1,1 @@
+We used LESS to handle the styling of the web app.

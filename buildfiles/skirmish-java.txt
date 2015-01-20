@@ -1,1 +1,1 @@
-used for main development.
+Java was the primary language that we used with the Eclipse IDE.

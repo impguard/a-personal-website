@@ -9,7 +9,7 @@ buildDir = "buildfiles";
 buildDataObject = function(from, to) {
   jadeObj = JSON.parse(fs.readFileSync(path.join(buildDir, "data.json"), "utf8"));
 
-  // Object page
+  // About page
   _.each(jadeObj.about, function(value, key, list) {
     // Read content from files
     filename = value;
@@ -43,6 +43,9 @@ buildDataObject = function(from, to) {
       });
     }
   });
+
+  // Hobbies Page
+  jadeObj.globals.hobbies = jadeObj.hobbies
 
   return jadeObj;
 };

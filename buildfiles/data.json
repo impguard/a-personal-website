@@ -13,38 +13,30 @@
             "content": "timeline.txt"
         },
         {
-            "name": "Skirmish",
-            "id": "skirmish",
-            "time": "Fall 2013",
-            "endDate": "8-1-2013",
-            "duration": 10,
-            "type": "project",
-            "github": "http://www.github.com",
-            "website": "http://www.google.com",
-            "content": "skirmish.txt",
+            "name": "Palantir",
+            "id": "palantir",
+            "time": "Summer 2013",
+            "endDate": "8-13-2013",
+            "duration": 3,
+            "type": "internship",
+            "content": "palantir.txt",
             "breakdown": [
                 {
-                    "lang": "C++",
-                    "percent": 50,
-                    "content": "skirmish-c++.txt"
+                    "lang": "CS",
+                    "percent": 70,
+                    "content": "palantir-cs.txt"
                 },
                 {
-                    "lang": "Java",
-                    "percent": 50,
-                    "content": "skirmish-java.txt"
+                    "lang": "LESS",
+                    "percent": 25,
+                    "content": "palantir-less.txt"
+                },
+                {
+                    "lang": "Misc.",
+                    "percent": 5,
+                    "content": "palantir-misc.txt"
                 }
             ]
-        },
-        {
-            "name": "Instaparse",
-            "id": "instaparse",
-            "time": "Fall 2014",
-            "endDate": "12-1-2014",
-            "duration": 2,
-            "type": "project",
-            "github": "http://www.github.com",
-            "website": "http://www.google.com",
-            "content": "instaparse.txt"
         },
         {
             "name": "Microsoft",
@@ -53,32 +45,159 @@
             "endDate": "8-10-2014",
             "duration": 3,
             "type": "internship",
-            "website": "http://www.google.com",
-            "content": "microsoft.txt"
+            "content": "microsoft.txt",
+            "breakdown": [
+                {
+                    "lang": "EQ",
+                    "percent": 50,
+                    "content": "microsoft-eq.txt"
+                },
+                {
+                    "lang": "UX",
+                    "percent": 50,
+                    "content": "microsoft-ux.txt"
+                }
+            ]
+        },
+        {
+            "name": "InstaParser",
+            "id": "instaparser",
+            "time": "Fall 2014",
+            "github": "https://github.com/ImpGuard/instaparse",
+            "web": "www.instaparser.herokuapp.com",
+            "endDate": "11-10-2014",
+            "duration": 1,
+            "type": "project",
+            "content": "instaparser.txt",
+            "breakdown": [
+                {
+                    "lang": "Python",
+                    "percent": 30,
+                    "content": "instaparser-python.txt"
+                },
+                {
+                    "lang": "Misc.",
+                    "percent": 50,
+                    "content": "instaparser-misc.txt"
+                },
+                {
+                    "lang": "Web",
+                    "percent": 20,
+                    "content": "instaparser-web.txt"
+                }
+            ]
+        },
+        {
+            "name": "My Website",
+            "id": "personal-website",
+            "time": "January 2015",
+            "github": "https://github.com/ImpGuard/website",
+            "endDate": "1-25-2015",
+            "duration": 1,
+            "type": "project",
+            "content": "personal-website.txt",
+            "breakdown": [
+                {
+                    "lang": "Web",
+                    "percent": 50,
+                    "content": "personal-website-web.txt"
+                },
+                {
+                    "lang": "AI",
+                    "percent": 50,
+                    "content": "personal-website-ai.txt"
+                }
+            ]
         },
         {
             "name": "Tron",
             "id": "tron",
-            "time": "March 2014",
-            "endDate": "3-5-2014",
+            "time": "Spring 2014",
+            "github": "https://github.com/ImpGuard/tron",
+            "endDate": "3-1-2014",
             "duration": 0,
             "type": "project",
-            "github": "http://www.github.com",
-            "website": "http://www.google.com",
             "content": "tron.txt",
             "breakdown": [
                 {
                     "lang": "TS",
-                    "percent": 70,
+                    "percent": 100,
                     "content": "tron-ts.txt"
-                },
-                {
-                    "lang": "JS",
-                    "percent": 30,
-                    "content": "tron-js.txt"
                 }
-
             ]
+        },
+        {
+            "name": "PyMind",
+            "id": "pymind",
+            "time": "Winter 2013",
+            "github": "https://github.com/ImpGuard/pymind",
+            "endDate": "2-1-2014",
+            "duration": 2,
+            "type": "project",
+            "content": "pymind.txt",
+            "breakdown": [
+                {
+                    "lang": "Python",
+                    "percent": 100,
+                    "content": "pymind-python.txt"
+                }
+            ]
+        },        
+        {
+            "name": "Skirmish",
+            "id": "skirmish",
+            "time": "Spring 2013",
+            "endDate": "4-1-2013",
+            "duration": 3,
+            "type": "project",
+            "content": "skirmish.txt",
+            "breakdown": [
+                {
+                    "lang": "Java",
+                    "percent": 100,
+                    "content": "skirmish-java.txt"
+                }
+            ]
+        }
+
+    ],
+
+    "hobbies": [
+        {
+            "name": "Judo",
+            "img": "judo.svg"
+        },
+        {
+            "name": "Reading",
+            "img": "reading.svg"
+        },
+        {
+            "name": "League of Legends",
+            "img": "riot.svg"
+        },
+        {
+            "name": "Science Fiction",
+            "img": "scifi.svg"
+        },
+        {
+            "name": "PC Gaming",
+            "img": "steam.svg"
+        },
+        {
+            "name": "Temporary Hobby",
+            "img": "judo.svg"
+        },
+        {
+            "name": "Temporary Hobby 2",
+            "img": "scifi.svg"
+        },
+        {
+            "name": "Temporary Hobby 3",
+            "img": "reading.svg"
+        },
+        {
+            "name": "Temporary Hobby 4",
+            "img": "riot.svg"
         }
     ],
 

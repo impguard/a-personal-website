@@ -1,0 +1,5 @@
+At Palantir, I worked with 3 other interns to build an interactive web app that served as a prototype for the Palantir Metropolis team as they began transitioning their Swing-Java codebase to the web. During this time I maintained unit tests using Mocha and Gerrit and utilized a GruntJS based build system. I was also in charge of maintaining a Wiki page documenting our research, code infrastructure, and design decisions.
+
+<br><br>
+
+At the company-wide hackathon, I also participated in building some great side projects. The first was a simple Javascript library built on top of D3.js that converted a JSON file to an interactive SVG chart. The second was a hardware based "shower tracker" that utilized a Rasberry PI server and an Arduino client to track shower usage at the company to help employees determine which showers were currently taken.

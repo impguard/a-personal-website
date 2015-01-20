@@ -1,0 +1,1 @@
+C++ and Python were used for the Arduino and Raspberry PI in our "shower tracker" hack.

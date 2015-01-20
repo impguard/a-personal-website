@@ -4,10 +4,11 @@ $window.load(() ->
     # Constants
     #============================================================
 
+    experienceData = window.exports.experience
     $experience = $("#experience")
     $timeline = $experience.find(".timeline")
 
-    startDate = new Date("June 1 2010")
+    startDate = new Date("November 1 2012")
     endDate = new Date("June 1 2015")
     totalDays = Date.daysInBetween(startDate, endDate)
 
@@ -22,11 +23,32 @@ $window.load(() ->
         "python":
             "primary": "red"
             "secondary": "gray"
+        "cs":
+            "primary": "black"
+            "secondary": "gray"
         "ts":
             "primary": "red"
             "secondary": "gray"
         "js":
             "primary": "purple"
+            "secondary": "gray"
+        "less":
+            "primary": "black"
+            "secondary": "gray"
+        "ux":
+            "primary": "black"
+            "secondary": "gray"
+        "ai":
+            "primary": "black"
+            "secondary": "gray"
+        "eq":
+            "primary": "black"
+            "secondary": "gray"
+        "web":
+            "primary": "black"
+            "secondary": "gray"
+        "misc.":
+            "primary": "black"
             "secondary": "gray"
     }
 
@@ -42,10 +64,11 @@ $window.load(() ->
     # Code dials
     #============================================================
 
+    dialWidthRatio = 0.15
     dialHeightRatio = 0.9
 
     # Save global content with each breakdown
-    $.each(window.exports.experience, (index, item) -> 
+    $.each(experienceData, (index, item) -> 
         $("##{item.id}").data("breakdown", item.breakdown)
     )
 
@@ -57,7 +80,7 @@ $window.load(() ->
     # Resize current content code dials
     resizeCodeDials = () ->
         $breakdown = $currentContent.children(".breakdown")
-        dialSize = dialHeightRatio * $breakdown.height()
+        dialSize = Math.min(dialHeightRatio * $breakdown.height(), dialWidthRatio * $breakdown.width())
         $breakdown.children(".block").width(dialSize).height(dialSize)
 
     # Updates current content code dials, adding them if they don't exist
@@ -90,7 +113,7 @@ $window.load(() ->
             return
 
         # Create Dials
-        dialSize = dialHeightRatio * $breakdown.height()
+        dialSize = Math.min(dialHeightRatio * $breakdown.height(), dialWidthRatio * $breakdown.width())
         $.each(breakdown, (index, item) ->
             # Colors
             colors =langToColor[item.lang.toLowerCase()]
@@ -139,7 +162,7 @@ $window.load(() ->
                 () ->
                     popupFadeDelay = 0
                     if not isLast
-                        $expander.velocity("stop").velocity({ width: "40%" }, 500, "ease-in-out")
+                        $expander.velocity("stop").velocity({ width: "45%" }, 500, "ease-in-out")
                         popupFadeDelay = 300
                     $popup.velocity("stop").velocity("fadeIn",  
                         delay: popupFadeDelay
@@ -213,10 +236,10 @@ $window.load(() ->
     # Construct buttons on load
     colors = ["black", "white"]
     colorChoice = 0
-    $.each(window.exports.experience, (index, item) ->
+    $.each(experienceData, (index, item) ->
         # Calculate position and height
         height = (item.duration + 1) * 30 / totalDays * 100
-        position = Date.daysInBetween(startDate, new Date(item.endDate)) / totalDays * 100 - height / 2
+        position = (Date.daysInBetween(startDate, new Date(item.endDate)) - item.duration * 30) / totalDays * 100
 
         # Color choice
         color = colors[colorChoice++]

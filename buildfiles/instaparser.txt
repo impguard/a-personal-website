@@ -1,0 +1,5 @@
+Instaparser was built as a convenience tool mainly targeted at hackathon coders and students. We developed a simple language that could be used to specify the format of an input file, which is used to automatically generate a full fledged parser in either C++, Java, or Python.
+
+<br><br>
+
+The entire project was written in Python using the Nose testing framework. In addition to building the script, we also designed a website to showcase the project, provide instructions, and also allow users to use the script quickly online instead of downloading it themselves.

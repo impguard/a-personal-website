@@ -1,0 +1,1 @@
+Javascript and LESS was used in a Grunt buildsystem to generate the website.

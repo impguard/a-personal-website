@@ -1,0 +1,1 @@
+Determining how best to place UI elements that are intuitive was an important aspect of this internship.

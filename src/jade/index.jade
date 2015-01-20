@@ -13,7 +13,7 @@ block content
         a Experience
         .selector
       #hobbies-link
-        a Hobbies
+        a Interests
         .selector
       #contact-link
         a Contact
@@ -47,7 +47,8 @@ block content
   #experience
     .container
       .timeline
-        .bar
+        .start Late 2012
+        .end Present
       .spacing
       each project in experience
         .content(id= project.id)
@@ -61,7 +62,7 @@ block content
             if project.website
               a(href=project.website, target="_blank") website
           .text
-            .actual-text= project.content
+            .actual-text!= project.content
             .text-fade-before
             .text-fade-after
           .breakdown
