@@ -60,13 +60,13 @@ var handleLess = function(name) {
   return {
     options: { 
       sourceMap: true,
-      sourceMapFileName: "bin/styles/" + name + ".css.map",
+      sourceMapFileName: "styles/" + name + ".css.map",
       sourceMapURL: name + ".css.map",
       sourceMapBasepath: "src/less",
       sourceMapRootpath: "./less" 
     },
     src: "src/less/"+ name + ".less",
-    dest: "bin/styles/" + name + ".css"
+    dest: "styles/" + name + ".css"
   }
 }
 
@@ -79,18 +79,18 @@ module.exports = function(grunt) {
 
     // Task configuration.
     clean: {
-      scripts: "bin/scripts/*",
-      styles: "bin/styles/*",
-      html: "bin/*.html"
+      scripts: "scripts/*",
+      styles: "styles/*",
+      html: "*.html"
     },
     copy: {
-      less: { expand: true, cwd: "src", src: "less/*.less", dest: "bin/styles/" }
+      less: { expand: true, cwd: "src", src: "less/*.less", dest: "styles/" }
     },
     jade: {
       html: {
         options: { data: buildDataObject },
         files: {
-          "bin/index.html": "src/jade/index.jade"
+          "index.html": "src/jade/index.jade"
         }
       }
     },
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
     coffee: {
       scripts: {
         options: { sourceMap: true },
-        files: { "bin/scripts/magic.js": [
+        files: { "scripts/magic.js": [
           "src/scripts/util.coffee", "src/scripts/*.coffee", "src/scripts/nav.coffee"
         ]}
       }
@@ -111,10 +111,10 @@ module.exports = function(grunt) {
         options: {
           mangle: false,
           sourceMap: true,
-          sourceMapIn: "bin/scripts/magic.js.map"
+          sourceMapIn: "scripts/magic.js.map"
         },
-        src: "bin/scripts/magic.js",
-        dest: "bin/scripts/magic.min.js"
+        src: "scripts/magic.js",
+        dest: "scripts/magic.min.js"
       }
     },
     watch: {

@@ -1,0 +1,94 @@
+// Constants
+@navbarHeight: 85px;
+
+// Colors
+
+@home-theme: #212930;
+@about-theme: #1a4a72;
+@experience-theme: #B3B3B3;
+@experience-theme-transparent: rgba(179, 179, 179, 0);
+@hobbies-theme: #414b56;
+@contact-theme: @home-theme;
+
+@home-dark: #6E8397;
+@about-dark: #061D30;
+@about-dark-transparent: rgba(18, 35, 64, 0);
+@experience-dark: #000000;
+@hobbies-dark: #1B2129;
+@contact-dark: @home-dark;
+
+@hobbies-white: #D2D6D9;
+@hobbies-orange: #FF7F35;
+
+@link-orange: #FF7F35;
+
+// Nav color classes
+
+.home-theme { background-color: @home-theme; }
+.about-theme { background-color: @about-theme; }
+.experience-theme { background-color: @experience-theme; }
+.hobbies-theme { background-color: @hobbies-theme; }
+.contact-theme { background-color: @contact-theme; }
+.home-dark { background-color: @home-dark; }
+.about-dark { background-color: @about-dark; }
+.experience-dark { background-color: @experience-dark; }
+.hobbies-dark { background-color: @hobbies-dark; }
+.contact-dark { background-color: @contact-dark; }
+
+// Mixins
+
+.transition(@what, @time, @type) {
+    -webkit-transition: @what @time @type;
+    -moz-transition: @what @time @type;
+    -o-transition: @what @time @type;
+    transition: @what @time @type;   
+}
+
+.translateX(@amount) {
+  -webkit-transform: translateX(@amount);
+  transform: translateX(@amount);
+}
+
+.translateY(@amount) {
+    -webkit-transform: translateY(@amount);
+    transform: translateY(@amount);   
+}
+
+.translate(@amountX, @amountY) {
+    -webkit-transform: translate(@amountX, @amountY);
+    transform: translate(@amountX, @amountY);
+}
+
+.perspective(@amount) {
+    -webkit-perspective: @amount;
+    perspective: @amount;
+}
+
+.transform-style(@style) {
+    -webkit-transform-style: @style;
+    transform-style: @style;
+}
+
+.backface-visibility(@value) {
+    -webkit-backface-visibility: @value;
+    backface-visibility: @value;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.flex-direction(@type) {
+    flex-direction: @type;
+    -webkit-flex-direction: @type;
+}
+
+.align-items(@type) {
+    align-items: @type;
+    -webkit-align-items: @type;
+}
