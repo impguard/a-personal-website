@@ -47,6 +47,7 @@ a {
 
 #navbar {
     width: 100%; height: @navbarHeight;
+    min-width: 640px;
     position: fixed;
     top: 0;
     .transition(background-color, 0.1s, linear);
@@ -628,7 +629,7 @@ a {
         height: 90%;
         margin: 0 auto;
 
-        .cube, .dotContainer, .title {
+        .cube, .dotContainer {
             margin: 0 auto;
             width: 60%;
         }
@@ -801,6 +802,10 @@ a {
         bottom: 1%;
         text-align: center;
         font-size: 12px;
-        color: white;
+        color: rgba(255, 255, 255, 0.5);
+
+        a {
+            color: rgba(0, 255, 0, 0.5);
+        }
     }
 }

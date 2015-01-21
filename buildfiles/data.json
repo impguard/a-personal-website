@@ -168,36 +168,32 @@
             "img": "judo.svg"
         },
         {
-            "name": "Reading",
-            "img": "reading.svg"
+            "name": "Science Fiction",
+            "img": "scifi.svg"
+        },
+        {
+            "name": "Travel",
+            "img": "travel.svg"
+        },
+        {
+            "name": "Cooking",
+            "img": "cooking.svg"
+        },
+        {
+            "name": "Design",
+            "img": "design.svg"
         },
         {
             "name": "League of Legends",
             "img": "riot.svg"
         },
         {
-            "name": "Science Fiction",
-            "img": "scifi.svg"
-        },
-        {
             "name": "PC Gaming",
             "img": "steam.svg"
         },
         {
-            "name": "Temporary Hobby",
-            "img": "judo.svg"
-        },
-        {
-            "name": "Temporary Hobby 2",
-            "img": "scifi.svg"
-        },
-        {
-            "name": "Temporary Hobby 3",
-            "img": "reading.svg"
-        },
-        {
-            "name": "Temporary Hobby 4",
-            "img": "riot.svg"
+            "name": "Interstellar",
+            "img": "interstellar.svg"
         }
     ],
 
