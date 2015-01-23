@@ -301,6 +301,7 @@ $window.load(() ->
 
     experienceData = window.exports.experience
     $experience = $("#experience")
+    $container = $experience.children(".container")
     $timeline = $experience.find(".timeline")
 
     startDate = new Date("November 1 2012")
@@ -348,8 +349,23 @@ $window.load(() ->
     }
 
     #============================================================
+    # Experience Container Resize
+    #============================================================
+
+    containerMaxWidth = 1900
+
+    resizeContainer = () ->
+        if $window.width() >= containerMaxWidth
+            $container.width(containerMaxWidth - 200)
+        else
+            $container.css({ width: "100%" })
+
+    resizeContainer()
+    $window.resize(resizeContainer)
+
+    #============================================================
     # Experience Page State
-    #============================================================    
+    #============================================================
 
     # Current content being displayed
     $currentContent = $()
@@ -361,6 +377,7 @@ $window.load(() ->
 
     dialWidthRatio = 0.15
     dialHeightRatio = 0.9
+    dialMaxSize = 200
 
     # Save global content with each breakdown
     $.each(experienceData, (index, item) -> 
@@ -375,7 +392,7 @@ $window.load(() ->
     # Resize current content code dials
     resizeCodeDials = () ->
         $breakdown = $currentContent.children(".breakdown")
-        dialSize = Math.min(dialHeightRatio * $breakdown.height(), dialWidthRatio * $breakdown.width())
+        dialSize = Math.min(dialMaxSize, dialHeightRatio * $breakdown.height(), dialWidthRatio * $breakdown.width())
         $breakdown.children(".block").width(dialSize).height(dialSize)
 
     # Updates current content code dials, adding them if they don't exist
@@ -408,7 +425,7 @@ $window.load(() ->
             return
 
         # Create Dials
-        dialSize = Math.min(dialHeightRatio * $breakdown.height(), dialWidthRatio * $breakdown.width())
+        dialSize = Math.min(dialMaxSize, dialHeightRatio * $breakdown.height(), dialWidthRatio * $breakdown.width())
         $.each(breakdown, (index, item) ->
             # Colors
             colors =langToColor[item.lang.toLowerCase()]

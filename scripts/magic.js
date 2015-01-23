@@ -246,9 +246,10 @@
   });
 
   $window.load(function() {
-    var $buttons, $currentButton, $currentContent, $experience, $extensions, $items, $timeline, animateIn, animateInContent, colorChoice, colors, dialHeightRatio, dialWidthRatio, endDate, experienceData, hideCodeDials, langToColor, originalButtonWidth, resizeCodeDials, selectedColor, setItemColor, setupEventHandlers, startDate, switchToItem, totalDays, updateCodeDials, updateTextShadows;
+    var $buttons, $container, $currentButton, $currentContent, $experience, $extensions, $items, $timeline, animateIn, animateInContent, colorChoice, colors, containerMaxWidth, dialHeightRatio, dialMaxSize, dialWidthRatio, endDate, experienceData, hideCodeDials, langToColor, originalButtonWidth, resizeCodeDials, resizeContainer, selectedColor, setItemColor, setupEventHandlers, startDate, switchToItem, totalDays, updateCodeDials, updateTextShadows;
     experienceData = window.exports.experience;
     $experience = $("#experience");
+    $container = $experience.children(".container");
     $timeline = $experience.find(".timeline");
     startDate = new Date("November 1 2012");
     endDate = new Date("June 1 2015");
@@ -303,10 +304,23 @@
         "secondary": "#FFECCC"
       }
     };
+    containerMaxWidth = 1900;
+    resizeContainer = function() {
+      if ($window.width() >= containerMaxWidth) {
+        return $container.width(containerMaxWidth - 200);
+      } else {
+        return $container.css({
+          width: "100%"
+        });
+      }
+    };
+    resizeContainer();
+    $window.resize(resizeContainer);
     $currentContent = $();
     $currentButton = $();
     dialWidthRatio = 0.15;
     dialHeightRatio = 0.9;
+    dialMaxSize = 200;
     $.each(experienceData, function(index, item) {
       return $("#" + item.id).data("breakdown", item.breakdown);
     });
@@ -320,7 +334,7 @@
     resizeCodeDials = function() {
       var $breakdown, dialSize;
       $breakdown = $currentContent.children(".breakdown");
-      dialSize = Math.min(dialHeightRatio * $breakdown.height(), dialWidthRatio * $breakdown.width());
+      dialSize = Math.min(dialMaxSize, dialHeightRatio * $breakdown.height(), dialWidthRatio * $breakdown.width());
       return $breakdown.children(".block").width(dialSize).height(dialSize);
     };
     updateCodeDials = function() {
@@ -350,7 +364,7 @@
         showDials();
         return;
       }
-      dialSize = Math.min(dialHeightRatio * $breakdown.height(), dialWidthRatio * $breakdown.width());
+      dialSize = Math.min(dialMaxSize, dialHeightRatio * $breakdown.height(), dialWidthRatio * $breakdown.width());
       $.each(breakdown, function(index, item) {
         var $block, $expander, $popup, $text, colors, dial, isLast;
         colors = langToColor[item.lang.toLowerCase()];
