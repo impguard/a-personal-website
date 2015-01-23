@@ -259,48 +259,48 @@
         "secondary": "#B2DDFB"
       },
       "java": {
-        "primary": "#7AC943",
-        "secondary": "#CAE9B4"
+        "primary": "#D10000",
+        "secondary": "#FFE5E5"
       },
       "python": {
-        "primary": "red",
-        "secondary": "gray"
+        "primary": "#FFD730",
+        "secondary": "#FFFFE3"
       },
       "cs": {
-        "primary": "black",
-        "secondary": "gray"
+        "primary": "#131226",
+        "secondary": "#DFDEF2"
       },
       "ts": {
-        "primary": "red",
-        "secondary": "gray"
+        "primary": "#0061C4",
+        "secondary": "#E5FFFF"
       },
       "js": {
         "primary": "purple",
         "secondary": "gray"
       },
       "less": {
-        "primary": "black",
-        "secondary": "gray"
+        "primary": "#16274C",
+        "secondary": "#E2F3FF"
       },
       "ux": {
         "primary": "black",
-        "secondary": "gray"
+        "secondary": "#E5E5E5"
       },
       "ai": {
-        "primary": "black",
-        "secondary": "gray"
+        "primary": "#FF5C00",
+        "secondary": "#FFFFE5"
       },
       "eq": {
-        "primary": "black",
-        "secondary": "gray"
+        "primary": "#6B2886",
+        "secondary": "#FFF4FF"
       },
       "web": {
-        "primary": "black",
-        "secondary": "gray"
+        "primary": "#007E85",
+        "secondary": "#E5FFFF"
       },
       "misc.": {
-        "primary": "black",
-        "secondary": "gray"
+        "primary": "#6B3919",
+        "secondary": "#FFECCC"
       }
     };
     $currentContent = $();

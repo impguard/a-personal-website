@@ -164,35 +164,35 @@
 
     "hobbies": [
         {
-            "name": "Judo",
+            "name": "I love Judo",
             "img": "judo.svg"
         },
         {
-            "name": "Science Fiction",
+            "name": "I love Science Fiction",
             "img": "scifi.svg"
         },
         {
-            "name": "Travel",
-            "img": "travel.svg"
-        },
-        {
-            "name": "Cooking",
+            "name": "I enjoy Cooking",
             "img": "cooking.svg"
         },
         {
-            "name": "Design",
+            "name": "I love Traveling",
+            "img": "travel.svg"
+        },
+        {
+            "name": "I enjoy Design",
             "img": "design.svg"
         },
         {
-            "name": "League of Legends",
+            "name": "I play League of Legends",
             "img": "riot.svg"
         },
         {
-            "name": "PC Gaming",
+            "name": "I am a PC Gamer",
             "img": "steam.svg"
         },
         {
-            "name": "Interstellar",
+            "name": "I like Interstellar",
             "img": "interstellar.svg"
         }
     ],
