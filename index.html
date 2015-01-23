@@ -1,5 +1,741 @@
-<!DOCTYPE html><html><head><title>Personal Website</title><link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,700"><link rel="stylesheet" type="text/css" href="styles/main.css"><link rel="stylesheet" type="text/css" href="lib/perfect-scrollbar.min.css"><script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script><script type="text/javascript" src="lib/jquery.waypoints.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.1/velocity.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.1/velocity.ui.min.js"></script><script type="text/javascript" src="lib/fastclick.js"></script><script type="text/javascript" src="lib/perfect-scrollbar.min.js"></script><script type="text/javascript" src="lib/progressbar.min.js"></script><script type="text/javascript">window.exports = {}
-window.exports = {"experience":[{"name":"Skirmish","id":"skirmish","endDate":"2013-04-01T07:00:00.000Z","duration":3,"type":"project","breakdown":[{"lang":"Java","percent":100,"content":"Java was the primary language that we used with the Eclipse IDE."}]},{"name":"Palantir","id":"palantir","endDate":"2013-08-13T07:00:00.000Z","duration":3,"type":"internship","breakdown":[{"lang":"CS","percent":70,"content":"CoffeeScript was used the most since a majority of the projects were web based."},{"lang":"LESS","percent":25,"content":"We used LESS to handle the styling of the web app."},{"lang":"Misc.","percent":5,"content":"C++ and Python were used for the Arduino and Raspberry PI in our \"shower tracker\" hack."}]},{"name":"PyMind","id":"pymind","endDate":"2014-02-01T08:00:00.000Z","duration":2,"type":"project","breakdown":[{"lang":"Python","percent":100,"content":"The entire project was developed in Python using various libraries."}]},{"name":"Tron","id":"tron","endDate":"2014-03-01T08:00:00.000Z","duration":0,"type":"project","breakdown":[{"lang":"TS","percent":100,"content":"The entire project was built using TypeScript with some LESS."}]},{"name":"Microsoft","id":"microsoft","endDate":"2014-08-10T07:00:00.000Z","duration":3,"type":"internship","breakdown":[{"lang":"EQ","percent":50,"content":"\"Leading without authority\" was valuable in order to convince others that my decisions were correct."},{"lang":"UX","percent":50,"content":"Determining how best to place UI elements that are intuitive was an important aspect of this internship."}]},{"name":"InstaParser","id":"instaparser","endDate":"2014-11-10T08:00:00.000Z","duration":1,"type":"project","breakdown":[{"lang":"Python","percent":30,"content":"Python was used as the primary language for the project."},{"lang":"Misc.","percent":50,"content":"C++, Python, and Java were used indirectly when outputting the parser code."},{"lang":"Web","percent":20,"content":"Javascript and LESS was used in a Grunt buildsystem to generate the website."}]},{"name":"My Website","id":"personal-website","endDate":"2015-01-25T08:00:00.000Z","duration":1,"type":"project","breakdown":[{"lang":"Web","percent":50,"content":"A large portion of this project was web development using the aforementioned tools."},{"lang":"AI","percent":50,"content":"A large amount of time was spent on designing the website using Adobe Illustrator."}]}],"hobbies":[{"name":"Judo","img":"judo.svg"},{"name":"Science Fiction","img":"scifi.svg"},{"name":"Travel","img":"travel.svg"},{"name":"Cooking","img":"cooking.svg"},{"name":"Design","img":"design.svg"},{"name":"League of Legends","img":"riot.svg"},{"name":"PC Gaming","img":"steam.svg"},{"name":"Interstellar","img":"interstellar.svg"}]}</script><script type="text/javascript" src="scripts/magic.min.js"></script></head><body><div id="navbar"><nav><div id="home-link"><a>Home</a><div class="selector"></div></div><div id="about-link"><a>About</a><div class="selector"></div></div><div id="experience-link"><a>Experience</a><div class="selector"></div></div><div id="hobbies-link"><a>Interests</a><div class="selector"></div></div><div id="contact-link"><a>Contact</a><div class="selector"></div></div></nav></div><div id="home"><div class="title"><p class="name">Kevin Wu</p><p class="tagline">A personal website</p></div></div><div id="about"><div class="container"><div class="wall"><div class="counter"><img src="imgs/portrait.svg" alt="Portrait" class="portrait"><img src="imgs/backpack.svg" alt="Student" class="student"><img src="imgs/laptop.svg" alt="Hacker" class="hacker"><img src="imgs/desktop.svg" alt="Gamer" class="gamer"><div class="portrait-content content"><div class="arrow"></div><div class="wrapper"><img src="imgs/cancel.svg" alt="Cancel" class="cancel"><div class="padding"></div><div class="text"><div class="actual-text">Hi, I'm <span>Kevin</span> and I'm passionate about technology. Raised in the Silicon Valley and earning my EECS degree at UC Berkeley, I've spent a large portion of my time building cool projects that push the boundaries of what I've learnt at school.  I believe that the key to success is not only having a strong grasp of the fundamentals in a variety of areas, but also being able to have the initiative to go out into the world and make things happen. I'm looking forward to taking the skills that I've honed and repurposing them to create amazing products that will make people's lives that much more exciting.</div><div class="text-fade-before"></div><div class="text-fade-after"></div></div></div></div><div class="student-content content"><div class="arrow"></div><div class="wrapper"><img src="imgs/cancel.svg" alt="Cancel" class="cancel"><div class="padding"></div><div class="text"><div class="actual-text">I am a <span>student</span>. Despite having spent a large chunk of my life at college, I have found that I have an unquenchable thirst for knowledge that drives me to learn no matter where I am. I feel that the best way to grow as a developer, designer, and person is to always be bringing in new ideas and perspectives. By pushing the boundaries of what I can do, I can show that I am a multifaceted individual who can bring a lot to the table.</div><div class="text-fade-before"></div><div class="text-fade-after"></div></div></div></div><div class="hacker-content content"><div class="arrow"></div><div class="wrapper"><img src="imgs/cancel.svg" alt="Cancel" class="cancel"><div class="padding"></div><div class="text"><div class="actual-text">I am a <span>hacker</span>. I love making things. As a developer, I love coming up with an idea and being able to immediately execute it to produce something that people can play with and enjoy. I am always full of crazy ideas - some useful and some not - that I am constantly trying to implement. Some of these ideas end up becoming pretty great projects while others might just be "learning experiences". Regardless, I am always up for diving into the unknown and making something really cool. </div><div class="text-fade-before"></div><div class="text-fade-after"></div></div></div></div><div class="gamer-content content"><div class="arrow"></div><div class="wrapper"><img src="imgs/cancel.svg" alt="Cancel" class="cancel"><div class="padding"></div><div class="text"><div class="actual-text">I'm a <span>gamer</span>. Sitting down and exploring a fantasy world or engaging with others in a competitive shooter is something that I find extremely entertaining and fun. However, it isn't just the game that excites me. What I find really inspiring is the creativity and passion that the developers have when designing and creating this virtual reality for others to spend their time in. Being able to produce a world and a story that is convincing enough to engage players is something that I hope to reproduce in order to create products that are just as captivating.</div><div class="text-fade-before"></div><div class="text-fade-after"></div></div></div></div></div></div><div class="table"><div class="top"></div><div class="shadow"></div></div></div></div><div id="experience"><div class="container"><div class="timeline"><div class="start">Late 2012</div><div class="end">Present</div></div><div class="spacing"></div><div id="introduction" class="content"><div class="title"><span class="strong">Timeline</span>&nbsp;</div><div class="text"><div class="actual-text">Even though I have spent a lot of time at school, I have had more experiences beyond taking tests. Check out some of my most interesting projects on the left!</div><div class="text-fade-before"></div><div class="text-fade-after"></div></div><div class="breakdown"></div></div><div id="skirmish" class="content"><div class="date"><span class="strong">S</span> Spring 2013</div><div class="title"><span class="strong">Skirmish</span>&nbsp;</div><div class="text"><div class="actual-text">Not every project is a success, and Skirmish was one of my first attempts at a large project. Working with my two housemates, we created a simple real time strategy game in Java. This project incorporated a lot of moving parts, including a pathfinding algorithm on top of a simple A* search to ensure clumps of colliding units could path around one another smoothly, a rendering engine that properly handled fog of war and the various game sprites, a modular infrastructure where unit properties could be tweaked on the go, and a server-client system so multiple clients could start a game together.
+<!DOCTYPE html><html><head><title>Personal Website</title><link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,700"><link rel="stylesheet" type="text/css" href="styles/main.css"><link rel="stylesheet" type="text/css" href="lib/perfect-scrollbar.min.css"><script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script><script type="text/javascript" src="lib/jquery.waypoints.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.1/velocity.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.1/velocity.ui.min.js"></script><script type="text/javascript" src="lib/fastclick.js"></script><script type="text/javascript" src="lib/perfect-scrollbar.min.js"></script><script type="text/javascript" src="lib/progressbar.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/vivus/0.1.2/vivus.min.js"></script><script type="text/javascript" src="lib/pathformer.js"></script><script type="text/javascript">window.exports = {}
+window.exports = {"experience":[{"name":"Skirmish","id":"skirmish","endDate":"2013-04-01T07:00:00.000Z","duration":3,"type":"project","breakdown":[{"lang":"Java","percent":100,"content":"Java was the primary language that we used with the Eclipse IDE."}]},{"name":"Palantir","id":"palantir","endDate":"2013-08-13T07:00:00.000Z","duration":3,"type":"internship","breakdown":[{"lang":"CS","percent":70,"content":"CoffeeScript was used the most since a majority of the projects were web based."},{"lang":"LESS","percent":25,"content":"We used LESS to handle the styling of the web app."},{"lang":"Misc.","percent":5,"content":"C++ and Python were used for the Arduino and Raspberry PI in our \"shower tracker\" hack."}]},{"name":"PyMind","id":"pymind","endDate":"2014-02-01T08:00:00.000Z","duration":2,"type":"project","breakdown":[{"lang":"Python","percent":100,"content":"The entire project was developed in Python using various libraries."}]},{"name":"Tron","id":"tron","endDate":"2014-03-01T08:00:00.000Z","duration":0,"type":"project","breakdown":[{"lang":"TS","percent":100,"content":"The entire project was built using TypeScript with some LESS."}]},{"name":"Microsoft","id":"microsoft","endDate":"2014-08-10T07:00:00.000Z","duration":3,"type":"internship","breakdown":[{"lang":"EQ","percent":50,"content":"\"Leading without authority\" was valuable in order to convince others that my decisions were correct."},{"lang":"UX","percent":50,"content":"Determining how best to place UI elements that are intuitive was an important aspect of this internship."}]},{"name":"InstaParser","id":"instaparser","endDate":"2014-11-10T08:00:00.000Z","duration":1,"type":"project","breakdown":[{"lang":"Python","percent":30,"content":"Python was used as the primary language for the project."},{"lang":"Misc.","percent":50,"content":"C++, Python, and Java were used indirectly when outputting the parser code."},{"lang":"Web","percent":20,"content":"Javascript and LESS was used in a Grunt buildsystem to generate the website."}]},{"name":"My Website","id":"personal-website","endDate":"2015-01-25T08:00:00.000Z","duration":1,"type":"project","breakdown":[{"lang":"Web","percent":50,"content":"A large portion of this project was web development using the aforementioned tools."},{"lang":"AI","percent":50,"content":"A large amount of time was spent on designing the website using Adobe Illustrator."}]}],"hobbies":[{"name":"Judo","img":"judo.svg"},{"name":"Science Fiction","img":"scifi.svg"},{"name":"Travel","img":"travel.svg"},{"name":"Cooking","img":"cooking.svg"},{"name":"Design","img":"design.svg"},{"name":"League of Legends","img":"riot.svg"},{"name":"PC Gaming","img":"steam.svg"},{"name":"Interstellar","img":"interstellar.svg"}]}</script><script type="text/javascript" src="scripts/magic.min.js"></script></head><body><div id="navbar"><nav><div id="home-link"><a>Home</a><div class="selector"></div></div><div id="about-link"><a>About</a><div class="selector"></div></div><div id="experience-link"><a>Experience</a><div class="selector"></div></div><div id="hobbies-link"><a>Interests</a><div class="selector"></div></div><div id="contact-link"><a>Contact</a><div class="selector"></div></div></nav></div><div id="home"><div class="container"><div class="background"><svg id="kevin" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1100px"
+   height="600px" viewBox="0 0 1100 600" enable-background="new 0 0 1100 600" xml:space="preserve">
+<g id="Me">
+  <path id="Shirt_1_" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M267.058,599.701
+    c0,0-23.684-27.879-54.724-47.851c-0.786-136.69,26.193-210.655,40.335-242.011c25.327-38.757,52.21-28.81,54.841-29.291
+    c-0.733,19.315,26.861,34.545,76.405,55.006c10.197,10.525,13.314,15.671,15.292,17.951c4.116-0.351,6.163,0.434,8.511,1.851
+    c2.184,5.857,7.611,8.16,7.611,8.16s13.654-1.149,18.176,2.714c7.481,6.002,8.305,16.776,8.305,16.776s10.032,4.687,13.651,7.73
+    c2.865,8.491,2.879,13.405,2.879,13.405s6.662,3.949,8.635,10.115c0.696,4.202-0.823,7.236-0.823,7.236l4.688,14.31l4.44,9.704
+    c0,0,8.8,9.54,10.362,14.186c5.015,3,4.359,3.578,6.661,5.181c3.125-1.028,4.194,0.493,4.194,0.493s5.977,6.873,6.538,8.758
+    c6.208,1.727,10.115,2.838,10.115,2.838l24.548-17.27l4.811-10.609c0,0,4.894-5.795,9.005-7.524
+    c1.151-2.223,4.604-10.283,4.604-10.283s-2.194-10.326-1.426-16.43c3.729-5.445,5.537-11.038,5.537-11.038l5.154-3.179
+    c0,0,3.242-6.275,7.28-7.962c2.282-0.633,3.654-0.016,3.654-0.016s1.992-3.255,9.653-1.121c1.383-5.382,5.606-6.3,8.554-5.234
+    c7.729,2.795,1.233,4.769,0.329,11.184c1.405-5.421,3.372-7.687,5.876-8.16c4.5-0.846,11.685,6.162,6.207,11.157
+    c-3.491,3.007,0.028-4.293-0.487-3.614c-0.515,0.679-1.294,4.272-1.93,5.535c-0.636,1.263-1.857,4.892-1.602,6.032
+    c0.256,1.14,1.025,1.413,1.025,1.413s2.688-7.073,6.37-7.848c5.85-1.008,6.209,2.802,6.209,3.706
+    c-0.163,4.857-3.344,6.522-4.265,9.935c-3.072,11.306-8.562,20.003-12.636,24.689c1.237,2.777-5.259,17.642-5.259,17.642
+    s3.217,6.526-2.879,13.733c-1.491,2.353-17.097,57.198-78.824,84.704c-36.637-4.194-84.992-34.17-84.992-34.17l-20.477,77.468"/>
+  <path id="Left_Hand" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M468.281,427.988l-2.128-6.495
+    c0,0,1.519-3.035,0.823-7.236c-1.973-6.167-8.635-10.115-8.635-10.115s-0.012-4.372-2.418-11.994l0,0
+    c1.41,0.501,3.609,1.097,6.858,0.552c17.497-3.011,19.398-5.878,20.822-5.771c3.027,0.724,3.939,3.378,4.224,3.809
+    c12.002-2.777,28.519-24.139,31.887-25.7c2.997-2.056,9.413,0.184,12.374-0.535c6.969-3.68,7.401-2.508,8.983-1.309
+    c8.717-1.508,9.36,1.665,9.757,1.904c4.45,2.51,9.554,5.415,9.817,5.89c1.479,2.171,1.726,3.342,2.404,5.748
+    c0.925,1.542,1.281,1.423,1.997,2.223c0.675,1.181,0.767,3.156,0.026,3.095c-9.671-16.481-28.679-11.688-28.643-11.186
+    c20.575-5.172,28.953,11.143,30.259,14.596c1.469,3.795-2.899,3.33-3.903,1.11c-1.587-4.842-6.783-3.629-6.783-3.629
+    s-3.453-1.708-5.533-1.666c-8.33,0.453-10.021-1.406-10.292-1.249c-0.792,3.059-4.313,2.607-6.507,2.854l-0.097,6.071
+    c0,0,6.549-0.209,7.318-0.417c7.971-5.161,17.325-6.634,19.285-5.131c1.959,1.503,9.164,6.467-14.645,15.186
+    c-23.499,17.803-35.934,13.385-35.934,13.385s-6.5,3.863-12.255,2.738c-1.222,0.442-3.451,1.249-3.451,1.249
+    s-0.152,3.876-0.654,5.176c-4.943,5-10.361,2.562-12.493,3.688c-2.133,1.126-12.464,3.162-12.464,3.162"/>
+  <path id="Headset" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M383.916,335.554
+    c10.197,10.525,13.314,15.671,15.292,17.951c4.116-0.351,6.163,0.434,8.511,1.851c2.184,5.857,7.611,8.16,7.611,8.16
+    s13.654-1.149,18.176,2.714c4.599,3.688,6.682,9.181,7.605,12.866c0,0,30.306-9.247,11.474-38.277c0,0-26.48-39.474-54.289-15.944
+    c0.268,0.148,3.768,2.149,9.265,4.431c-17.64-6.579-54.283-35.115-87.373-62.358l-12.677,13.601
+    C306.777,299.863,334.371,315.094,383.916,335.554"/>
+  <path id="Hair_1_" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M420.368,222.479
+    c0.273,3.503,0.847,7.049,1.87,10.363c-1.809,1.48-7.155-1.398-7.155-1.398l1.974,6.085l-3.701-1.48l-0.74,5.181
+    c0,0-13.65-17.023-21.751-18.75c-9.026-3.269-13.59-3.393-18.956-0.616c-3.78,0.08-4.625-1.79-9.869,1.11
+    c-9.128,7.216-8.08,34.663-8.08,34.663s-3.454,10.3-3.516,12.458c-2.529-3.762-5.427-6.662-5.427-6.662s-2.098,5.675-2.468,7.525
+    c-7.278-4.379-10.115-5.736-10.115-5.736l-7.648,3.639l-1.234-1.676l-3.367-0.238l-1.606,1.723c0,0-0.183-5.255-0.587-6.89
+    c-0.405-1.636-1.458-4.756-1.458-5.89c0.439-2.695,0-7.163,0-7.163l-4.33-9.719l-5.264-6.003v-7.237c0,0-1.131-0.234-1.833-0.269
+    c0.585-1.354,0.28-2.523,0.28-2.523s-2.427-3.461-3.14-3.588c0.508-1.711,1.033-2.34,1.234-3.702
+    c-1.122-0.782-1.254-2.102-2.58-2.58c0.732-1.238,1.711-2.033,1.907-2.86c-0.603-0.961-1.582-1.545-1.907-2.074
+    c0.996-2.015,1.178-3.926,1.178-3.926s-1.437-1.917-2.075-2.468c0.902-1.264,1.823-3.927,1.626-4.542s-3.001-0.417-4.093,0
+    c0.3-1.175,2.86-4.823,2.86-4.823s-2.89-0.248-4.77,0.05c0.296-0.925,1.28-3.537,1.28-3.537s-2.039,0.807-3.504,1.322
+    c2.772-3.531,8.109-21.025,8.109-21.025l-4.434,1.13c0,0,12.818-16.035,11.547-17.693c-2.037,1.888-5.207,2.899-7.525,3.947
+    c2.042-2.243,15.335-24.696,25.201-26.733c1.195,2.573,6.571,4.319,6.571,4.319s6.894-19.539,15.163-21.09
+    c-1.147,2.7,0.681,5.265,0.681,5.265s19.903-11.789,23.067-11.103c-0.178,1.657,2.838,3.084,2.838,3.084s38.212-0.741,39.967,0.74
+    c-5.422,1.966-7.155,4.071-7.155,4.071s38.569,4.605,40.09,6.785c-4.482,2.426-3.084,3.33-3.084,3.33s22.286-0.165,39.351,26.028
+    c-5.387-1.521-6.785-0.124-6.785-0.124s10.198,1.563,11.472,10.115c-4.729-1.892-6.291-1.604-6.291-1.604
+    s9.869,10.156,7.648,14.802c-1.069-1.603-4.564-5.181-4.564-5.181s5.387,9.828,4.564,13.569c-1.809-0.863-5.551-1.974-5.551-1.974
+    s6.127,5.962,4.688,11.669c-1.933-1.841-5.881-4.638-5.881-4.638s1.728,4.03-1.52,6.292c-0.042-1.192-2.205-4.565-2.205-4.565
+    l-3.716-2.343c0,0-14.433-10.979-17.147-12.953c1.809,2.961,5.798,9.992,5.798,9.992s-11.503-6.674-13.363-7.278
+    c-3.043-0.987-7.73,0.329-9.046,1.069c-1.315,0.74,2.549,12.747,2.549,12.747s-9.539-4.112-12.089-5.181
+    c1.728,2.796,5.51,9.21,5.51,9.21l-13.651-5.51c0,0,6.908,6.497,5.181,15.79c-3.207-3.29-7.401-6.168-7.401-6.168
+    s-2.271,10.175-1.752,21.361"/>
+  <path id="Glasses_Frame" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M467.325,221.415
+    c1.13,0.86,0.277,1.774-0.679,2.052c-0.463,0.882-0.678,4.565-0.678,4.565h-1.666c0,0,0.687-2.837,0.563-4.255
+    c-23.261,1.264-23.959-1.625-75.934-1.97c-2.919-0.97-5.512-1.654-8.21-1.864c57.471,1.067,78.215,0.103,85.092,1.614
+    c1.233-5.29,2.478-5.818,3.114-7.047c2.159-3.454-0.601-4.518-0.601-4.518s-1.054,0.154-1.807,2.546
+    c-0.443,0.231-0.815-0.337-0.975-0.691c0.673-1.542-0.975-2.163-0.975-2.163l0.01-0.815c1.489-0.036,1.892,1.514,1.892,1.514
+    l0.441,0.02c0,0,4.339-12.14-1.459-8.81l0.915-1.131c0,0,5.623-3.145,2.375,8.286C474.706,212.324,467.51,215.901,467.325,221.415z
+    "/>
+  <path id="Face_2_" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M420.368,222.479
+    c0.273,3.503,0.847,7.049,1.87,10.363c-1.809,1.48-7.155-1.398-7.155-1.398l1.974,6.085l-3.701-1.48l-0.74,5.181
+    c0,0-13.65-17.023-21.751-18.75c-9.026-3.269-13.59-3.393-18.956-0.616c-3.78,0.08-4.625-1.79-9.869,1.11
+    c-9.128,7.216-8.08,34.663-8.08,34.663s-3.454,10.3-3.516,12.458c-2.529-3.762-5.427-6.662-5.427-6.662s-2.098,5.675-2.468,7.525
+    c-7.278-4.379-10.115-5.736-10.115-5.736l-7.648,3.639l-1.234-1.676l-3.367-0.238c28.069,23.109,58.694,47.149,78.109,57.928
+    l-0.001,0c1.816-1.537,4.635-3.396,5.424-3.832c4.858-11.29,11.735-17.396,17.409-24.55c7.525-2.302,21.135,4.153,31.333,1.851
+    c18.421-6.62,8.84-18.092,9.869-21.053c3.125-2.344,9.087-6.497,2.098-13.405l0.156-2.099c0,0,6.833-3.863,6.381-6.711
+    c-0.812-3.539-1.634-3.917-1.634-3.917l-0.091-5.361c1.561-1.403,4.549-1.568,5.595-1.974s9.535-3.212,4.086-12.155
+    c-1.847-3.842-9.051-14.309-9.051-14.309s2.437-4.595,2-6.165c-0.242-0.43-0.354-0.588-1.19-0.723
+    c-0.224-0.514-0.98-1.154-1.935-1.727"/>
+  <path id="Face_1_" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M468.744,208.747
+    c3.249-11.431-2.375-8.286-2.375-8.286l1.449-1.047l0.585-0.864l-0.935-1.316l-8.964-22.862c1.809,2.961,5.798,9.992,5.798,9.992
+    s-11.503-6.674-13.363-7.278c-3.043-0.987-7.73,0.329-9.046,1.069c-1.315,0.74,2.549,12.747,2.549,12.747
+    s-9.539-4.112-12.089-5.181c1.728,2.796,5.51,9.21,5.51,9.21l-13.651-5.51c0,0,6.908,6.497,5.181,15.79
+    c-3.207-3.29-7.401-6.168-7.401-6.168s-2.271,10.175-1.752,21.361"/>
+  <g id="Ear">
+    <path id="Outer_Ear" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M389.796,225.44
+      c0.782-4.194-8.656-5.466-8.656-5.466c-3.448-0.316-6.212,0.328-9.23,1.889c0,0-7.072,6.167-7.072,13.034
+      c0,6.867,0.329,14.844,7.442,20.642c0,0,13.415,9.961,20.477,3.988"/>
+    <path id="Inner_Ear" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M380.976,233.706
+      c1.974-1.049,6.24-2.64,4.071-6.724c-5.99-7.078-13.384,6.168-13.384,6.168s0.247,4.133-2.406,9.499
+      c2.899,11.287,8.574,11.719,8.574,11.719"/>
+    <path id="Lining" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M377.452,236.036
+      c0,0-1.055,1.227-2.282,2.29c-2.779,9.403,1.142,11.298,1.142,11.298"/>
+    <path id="Lining_1_" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M379.5,237.885
+      c1.595-1.511,2.099-1.935,4.114-1.85c2.014,0.087,2.266,2.396,2.392,3.36c0.125,0.966-0.756,1.092-0.546,2.351
+      c0.209,1.259,2.813,2.729,3.022,3.735c0.714,4.239-5.359,2.687-5.359,2.687"/>
+  </g>
+</g>
+<g id="Chair">
+  <path id="Primary_Back_1_" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M267.058,599.701
+    c0,0-23.684-27.879-54.724-47.851c0,0-157.94-114.239-159.783-153.806c-14.247-1.75-16.154,2.273-16.154,2.273
+    c-10.457,11.635,10.146,41.175,22.437,56.043c15.296,18.503,167.763,143.339,167.763,143.339"/>
+  <path id="Details" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M41.902,397.875
+    c0.579,45.922,208.176,187.136,216.317,201.826"/>
+  <path id="Secondary_Back" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M52.551,398.045
+    c29.157,10.23,109.491,99.542,113.915,118.905"/>
+  <path id="Details_1_" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M131.336,520.589
+    c0,0,18.958,24.095,22.728,48.521c10.859,22.184,31.579,30.592,31.579,30.592"/>
+</g>
+<g id="Me_Details">
+  <g id="Arm_Lines">
+    <path id="line_4" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M348.863,320.016
+      c-2.611-1.011-24.043-0.384-25.926-1.072c-22.82-8.142-20.6-29.112-20.6-31.579c0-2.467,5.158-5.798,5.158-5.798"/>
+    <path id="line_3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M354.084,322.528l-21.2,2.305
+      c0,0-6.555,0.587-10.674-0.419c-25-7.987-25.066-30.95-24.54-34.253c1.091-6.858,5.739-10.08,5.739-10.08"/>
+    <path id="line_2" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M419.825,372.565
+      c0,0-23.499-15.769-29.694-22.364c-6.195-6.596-11.333-16.776-11.333-16.776"/>
+    <path id="line_1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M381.413,334.517
+      c0,0,6.182,10.744,9.608,14.17s13.063,8.727,15.901,10.333c2.837,1.606,15.793,9.316,16.437,11.886"/>
+  </g>
+  <g id="Back_Lines">
+    <path id="line_3_1_" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M427.38,369.535
+      c-1.131-0.106-11.202,4.452-13.569,6.855"/>
+    <path id="line_2_1_" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M394.36,393.697
+      c0,0-36.76,39.72-37.747,71.793"/>
+    <path id="line_1_1_" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M346.005,518.286
+      c-15.542,23.438-16.529,68.093-16.529,68.093"/>
+  </g>
+  <g id="Arm_Wrinkles">
+    <path id="wrinkle_1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M513.151,476.962
+      c0,0,25.905,10.362,27.385,38.733"/>
+    <path id="wrinkle_2" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M515.885,478.281
+      c0,0,23.912,2.258,30.326,22.982"/>
+    <path id="wrinkle_3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M516.983,474.267
+      c0,0,19.606-1.992,30.832,12.564"/>
+    <path id="wrinkle_4" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M503.215,474.174
+      c0,0,9.484,8.256,6.688,13.684"/>
+  </g>
+  <g id="Cuffs">
+    <path id="right" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M556.12,431.276
+      c10.853-14.834,29.769-8.815,37.664-0.654c5.309,5.488,5.836,9.701,5.836,9.701"/>
+    <path id="left" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M487.827,390.738
+      c0,0,7.491,13.199,6.065,25.226"/>
+  </g>
+  <g id="Headset_Details">
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M442.346,378.653c0,0,26.604-11.354,0-41.515
+      c-0.617-0.637-2.837-3.187-4.996-4.256c-0.884-0.411-2.323-0.945-4.831-0.781c-8.41-0.019-23.849-2.426-23.849-2.426
+      s-1.726,19.033-12.705,19.631"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M407.175,355.038c0,0,13.769-20.304,32.333-13.026
+      "/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M411.321,350.154c0,0,5.428,11.532,16.059,4.884
+      c9.23-7.722-0.239-14.171-0.239-14.171"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M440.68,343.676c0,0,10.547,21.649-2.047,28.889"
+      />
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M409.101,328.874"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M432.519,332.102c0,0-12.994-7.114-23.849-2.426"
+      />
+  </g>
+  <g id="Glasses_Logo">
+    <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M456.771,221.486c-2.659-0.026-3.753,0.938-3.753,0.938
+      s0.938,0.913,3.649,0.886c2.71-0.026,3.648-0.782,3.648-0.782S459.428,221.512,456.771,221.486z"/>
+    <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M456.729,221.844c-1.614-0.016-2.279,0.569-2.279,0.569
+      s0.57,0.554,2.216,0.539c1.645-0.016,2.215-0.475,2.215-0.475S458.343,221.86,456.729,221.844z"/>
+  </g>
+  <g id="Headset_Logo">
+    <polygon fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="416.646,347.233 416.646,352.003 418.579,350.358 
+      418.949,353.195 420.596,352.332 421.786,352.996 420.596,350.893 420.142,351.222 419.217,348.672 417.88,349.618    "/>
+    <polygon fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="418.004,348.22 418.292,348.549 419.483,347.736 
+      419.825,348.795 423.966,344.643 423.719,342.422     "/>
+    <polygon fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="420.43,349.783 420.596,350.44 421.371,349.999 
+      421.54,350.729 423.554,348.795 423.554,346.904    "/>
+  </g>
+</g>
+<g id="Keyboard">
+  <g id="Base">
+    
+      <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="535.272" y1="404.487" x2="554.685" y2="413.964"/>
+    <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="545.497,361.831 549.827,359.306 
+      551.028,359.89 554.598,357.378 554.771,356.382 558.691,353.602 560.511,353.451 700.282,411.651 702.255,424.397 
+      648.884,459.929 601.413,437.149     "/>
+    <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="605.532,430.898 649.829,451.577 
+      700.282,411.651     "/>
+    <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="558.363" y1="407.416" x2="542.03" y2="400.18"/>
+  </g>
+  <g id="Keys">
+    <g id="Key">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="648.671,443.852 653.665,441.398 
+        646.623,438.837 642.173,441.344       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="648.8" y1="449.081" x2="648.671" y2="443.852"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="642.173" y1="441.344" x2="642.173" y2="445.496"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="653.665" y1="441.398" x2="654.305" y2="443.42"/>
+    </g>
+    <g id="Key_5_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="647.513,434.082 652.506,431.627 
+        645.464,429.067 641.015,431.574       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="647.641" y1="439.311" x2="647.513" y2="434.082"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="641.015" y1="431.574" x2="641.015" y2="435.726"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="652.506" y1="431.627" x2="653.147" y2="433.65"/>
+    </g>
+    <g id="Key_6_">
+      <polyline fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="611.543,418.07 629.804,425.567 
+        634.797,423.113 615.465,415.347 611.765,417.431       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="629.932" y1="430.796" x2="629.804" y2="425.567"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="611.016" y1="419.698" x2="611.016" y2="421.729"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="634.797" y1="423.113" x2="635.438" y2="425.136"/>
+    </g>
+    <g id="Key_7_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="637.289,420.265 642.282,417.811 
+        625.148,411.417 620.699,413.925       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="637.417" y1="425.494" x2="637.289" y2="420.265"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="620.699" y1="414.023" x2="620.699" y2="417.45"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="642.282" y1="417.811" x2="642.923" y2="419.833"/>
+    </g>
+    <g id="Key_8_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="645.17,414.929 650.164,412.476 
+        640.023,408.626 635.575,411.134       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="645.299" y1="420.159" x2="645.17" y2="414.929"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="635.575" y1="411.065" x2="635.575" y2="415.216"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="650.164" y1="412.476" x2="650.804" y2="414.498"/>
+    </g>
+    <g id="Key_19_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="632.494,409.808 637.488,407.354 
+        630.445,404.793 625.996,407.3       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="632.623" y1="414.207" x2="632.494" y2="409.808"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="625.996" y1="407.3" x2="625.996" y2="411.734"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="637.488" y1="407.354" x2="638.128" y2="409.6"/>
+    </g>
+    <g id="Key_20_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="624.308,406.116 629.301,403.662 
+        622.259,401.101 617.81,403.608      "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="624.436" y1="411.734" x2="624.308" y2="406.116"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="617.81" y1="403.608" x2="617.81" y2="407.76"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="629.301" y1="403.662" x2="629.778" y2="405.169"/>
+    </g>
+    <g id="Key_21_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="637.609,402.844 642.603,400.39 
+        635.561,397.829 631.111,400.336       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="637.737" y1="408.229" x2="637.609" y2="402.844"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="631.111" y1="400.336" x2="631.111" y2="404.488"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="642.603" y1="400.39" x2="643.243" y2="402.412"/>
+    </g>
+    <g id="Key_22_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="629.483,399.703 634.477,397.249 
+        627.435,394.688 622.985,397.195       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="629.601" y1="404.607" x2="629.483" y2="399.703"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="622.985" y1="397.195" x2="622.985" y2="401.347"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="634.477" y1="397.249" x2="634.794" y2="398.26"/>
+    </g>
+    <g id="Key_23_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="621.499,396.327 626.492,393.873 
+        619.45,391.313 615.001,393.82       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="621.627" y1="401.556" x2="621.499" y2="396.327"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="615.001" y1="393.82" x2="615.001" y2="397.971"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="626.492" y1="393.873" x2="626.854" y2="395.016"/>
+    </g>
+    <g id="Key_24_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="613.134,392.827 618.127,390.373 
+        611.085,387.812 606.636,390.319       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="613.262" y1="398.056" x2="613.134" y2="392.827"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="606.636" y1="390.319" x2="606.636" y2="391.633"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="618.127" y1="390.373" x2="618.58" y2="391.802"/>
+    </g>
+    <g id="Key_25_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="604.683,389.78 609.677,387.326 
+        602.634,384.765 598.186,387.272       "/>
+      <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M604.683,389.78"/>
+      <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M604.812,395.009"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="598.186" y1="387.272" x2="598.186" y2="388.74"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="609.677" y1="387.326" x2="610.021" y2="388.412"/>
+    </g>
+    <g id="Key_26_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="596.703,386.083 601.697,383.629 
+        594.654,381.069 590.206,383.576       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="596.703" y1="387.262" x2="596.703" y2="386.083"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="590.206" y1="383.576" x2="590.206" y2="386.267"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="601.697" y1="383.629" x2="602.163" y2="385.101"/>
+    </g>
+    <g id="Key_27_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="589.317,382.499 594.311,380.045 
+        587.268,377.484 582.819,379.991       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="589.416" y1="386.543" x2="589.317" y2="382.499"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="582.819" y1="379.991" x2="582.819" y2="383.462"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="594.311" y1="380.045" x2="594.654" y2="381.069"/>
+    </g>
+    <g id="Key_28_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="581.306,378.914 586.3,376.46 
+        579.257,373.899 574.809,376.406       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="581.306" y1="382.912" x2="581.306" y2="378.914"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="574.809" y1="376.406" x2="574.809" y2="379.982"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="586.3" y1="376.46" x2="586.77" y2="377.944"/>
+    </g>
+    <g id="Key_29_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="572.704,375.699 577.698,373.245 
+        570.655,370.684 566.207,373.191       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="572.784" y1="379.246" x2="572.704" y2="375.699"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="566.207" y1="373.191" x2="566.207" y2="377.343"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="577.698" y1="373.245" x2="578.11" y2="374.546"/>
+    </g>
+    <g id="Key_32_">
+      <polyline fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="559.577,370.189 
+        564.897,372.242 569.891,369.788 562.849,367.228 558.636,369.601       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="564.962" y1="376.932" x2="564.897" y2="372.242"/>
+      <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M558.399,373.886"/>
+      <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M558.399,369.735"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="569.891" y1="369.788" x2="570.248" y2="370.914"/>
+    </g>
+    <g id="Key_30_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="579.551,386.543 584.544,384.089 
+        577.502,381.529 573.053,384.036       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="579.615" y1="390.937" x2="579.551" y2="386.543"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="573.053" y1="384.036" x2="573.053" y2="387.228"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="584.544" y1="384.089" x2="585.185" y2="386.112"/>
+    </g>
+    <g id="Key_34_">
+      <polyline fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="563.167,387.758 
+        569.665,390.266 574.658,387.812 567.616,385.251 566.781,385.722       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="569.749" y1="393.678" x2="569.665" y2="390.266"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="563.349" y1="387.466" x2="563.349" y2="391.617"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="574.658" y1="387.812" x2="575.299" y2="389.834"/>
+    </g>
+    <g id="Key_33_">
+      <polyline fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="570.561,393.974 
+        566.219,392.395 561.77,394.902 567.605,397.154      "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="561.77" y1="394.902" x2="561.77" y2="398.37"/>
+    </g>
+    <g id="Key_35_">
+      <polyline fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="565.907,400.024 
+        554.242,395.361 549.793,397.868 561.77,402.859      "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="549.793" y1="397.967" x2="549.793" y2="402.119"/>
+    </g>
+    <g id="Key_31_">
+      <polyline fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="565.581,380.77 571.252,382.958 
+        576.246,380.505 569.204,377.944 565.559,379.998       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="571.252" y1="386.573" x2="571.252" y2="382.958"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="576.246" y1="380.505" x2="576.711" y2="381.974"/>
+    </g>
+    <g id="Key_9_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="653.019,409.274 658.012,406.82 
+        650.97,404.259 646.521,406.766      "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="653.147" y1="414.503" x2="653.019" y2="409.274"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="646.521" y1="406.766" x2="646.521" y2="410.918"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="658.012" y1="406.82" x2="658.653" y2="408.842"/>
+    </g>
+    <g id="Key_10_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="672.229,427.536 677.223,425.082 
+        670.181,422.521 665.731,425.028       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="672.357" y1="432.765" x2="672.229" y2="427.536"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="665.731" y1="425.028" x2="665.731" y2="429.18"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="677.223" y1="425.082" x2="677.863" y2="427.104"/>
+    </g>
+    <g id="Key_13_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="679.935,422.105 684.929,419.651 
+        677.886,417.09 673.437,419.597      "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="680.063" y1="427.334" x2="679.935" y2="422.105"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="673.437" y1="419.597" x2="673.437" y2="423.749"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="684.929" y1="419.651" x2="685.569" y2="421.673"/>
+    </g>
+    <g id="Key_16_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="689.933,413.745 694.926,411.291 
+        687.884,408.73 683.435,411.237      "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="690.061" y1="418.974" x2="689.933" y2="413.745"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="683.435" y1="411.237" x2="683.435" y2="415.389"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="694.926" y1="411.291" x2="695.567" y2="413.313"/>
+    </g>
+    <g id="Key_17_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="680.984,409.808 685.978,407.354 
+        678.936,404.793 674.486,407.3       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="681.112" y1="415.037" x2="680.984" y2="409.808"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="674.486" y1="407.3" x2="674.486" y2="411.452"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="685.978" y1="407.354" x2="686.618" y2="409.376"/>
+    </g>
+    <g id="Key_18_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="671.909,406.223 676.902,403.769 
+        669.86,401.208 665.411,403.715      "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="672.037" y1="411.452" x2="671.909" y2="406.223"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="665.411" y1="403.715" x2="665.411" y2="407.867"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="676.902" y1="403.769" x2="677.543" y2="405.792"/>
+    </g>
+    <g id="Key_36_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="662.619,402.305 667.612,399.851 
+        660.57,397.29 656.121,399.797       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="662.747" y1="407.534" x2="662.619" y2="402.305"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="656.121" y1="399.797" x2="656.121" y2="403.949"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="667.612" y1="399.851" x2="668.253" y2="401.874"/>
+    </g>
+    <g id="Key_37_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="653.45,398.834 658.444,396.381 
+        651.687,393.576 646.953,396.327       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="653.579" y1="404.064" x2="653.45" y2="398.834"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="646.953" y1="396.327" x2="646.953" y2="400.479"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="658.444" y1="396.381" x2="659.084" y2="398.403"/>
+    </g>
+    <g id="Key_38_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="645.216,395.631 650.209,393.178 
+        643.452,390.373 638.718,393.124       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="645.344" y1="400.861" x2="645.216" y2="395.631"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="638.718" y1="393.124" x2="638.718" y2="397.276"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="650.209" y1="393.178" x2="650.53" y2="394.248"/>
+    </g>
+    <g id="Key_39_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="637.19,392.411 642.184,389.957 
+        635.426,387.152 630.692,389.903       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="637.318" y1="397.64" x2="637.19" y2="392.411"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="630.692" y1="389.903" x2="630.692" y2="394.055"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="642.184" y1="389.957" x2="642.504" y2="390.968"/>
+    </g>
+    <g id="Key_40_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="625.612,387.277 630.606,384.823 
+        623.849,382.018 619.115,384.77      "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="625.741" y1="392.506" x2="625.612" y2="387.277"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="619.115" y1="384.77" x2="619.115" y2="388.921"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="630.606" y1="384.823" x2="631.247" y2="386.845"/>
+    </g>
+    <g id="Key_41_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="617.66,384.051 622.653,381.597 
+        615.896,378.792 611.162,381.543       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="617.788" y1="389.28" x2="617.66" y2="384.051"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="611.162" y1="381.543" x2="611.162" y2="385.695"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="622.653" y1="381.597" x2="622.952" y2="382.539"/>
+    </g>
+    <g id="Key_42_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="609.789,380.854 614.782,378.401 
+        608.024,375.595 603.291,378.347       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="609.917" y1="386.083" x2="609.789" y2="380.854"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="603.291" y1="378.347" x2="603.291" y2="382.499"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="614.782" y1="378.401" x2="615.06" y2="379.278"/>
+    </g>
+    <g id="Key_43_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="601.905,377.499 606.898,375.045 
+        600.141,372.24 595.407,374.992      "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="602.033" y1="382.729" x2="601.905" y2="377.499"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="595.407" y1="374.992" x2="595.407" y2="379.143"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="606.898" y1="375.045" x2="607.219" y2="376.064"/>
+    </g>
+    <g id="Key_44_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="592.551,373.563 597.545,371.109 
+        590.787,368.303 586.054,371.055       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="592.68" y1="378.792" x2="592.551" y2="373.563"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="586.054" y1="371.055" x2="586.054" y2="375.207"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="597.545" y1="371.109" x2="598.186" y2="373.131"/>
+    </g>
+    <g id="Key_45_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="584.607,370.039 589.601,367.585 
+        582.844,364.78 578.11,367.531       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="584.736" y1="375.268" x2="584.607" y2="370.039"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="578.11" y1="367.531" x2="578.11" y2="371.683"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="589.601" y1="367.585" x2="589.978" y2="368.774"/>
+    </g>
+    <g id="Key_46_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="576.389,366.891 581.382,364.437 
+        574.625,361.632 569.891,364.383       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="576.517" y1="372.12" x2="576.389" y2="366.891"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="569.891" y1="364.383" x2="569.891" y2="368.535"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="581.382" y1="364.437" x2="581.703" y2="365.448"/>
+    </g>
+    <g id="Key_47_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="562.265,360.705 567.259,358.251 
+        560.501,355.446 555.767,358.198       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="562.394" y1="365.934" x2="562.265" y2="360.705"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="555.767" y1="358.198" x2="555.767" y2="362.349"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="567.259" y1="358.251" x2="567.899" y2="360.273"/>
+    </g>
+    <g id="Key_14_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="670.973,418.07 675.967,415.616 
+        668.924,413.055 664.475,415.562       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="671.102" y1="422.856" x2="670.973" y2="418.07"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="664.475" y1="415.562" x2="664.475" y2="419.714"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="675.967" y1="415.616" x2="676.607" y2="417.638"/>
+    </g>
+    <g id="Key_15_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="662.187,413.852 667.181,411.398 
+        660.138,408.837 655.689,411.344       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="662.315" y1="419.081" x2="662.187" y2="413.852"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="655.689" y1="411.344" x2="655.689" y2="415.496"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="667.181" y1="411.398" x2="667.821" y2="413.42"/>
+    </g>
+    <g id="Key_11_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="663.624,423.951 668.617,421.497 
+        661.575,418.936 657.126,421.443       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="663.752" y1="429.18" x2="663.624" y2="423.951"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="657.126" y1="421.443" x2="657.126" y2="425.595"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="668.617" y1="421.497" x2="669.129" y2="423.114"/>
+    </g>
+    <g id="Key_12_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="655.513,420.158 660.507,417.704 
+        653.464,415.143 649.015,417.65      "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="655.641" y1="425.387" x2="655.513" y2="420.158"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="649.015" y1="417.65" x2="649.015" y2="421.802"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="660.507" y1="417.704" x2="661" y2="419.26"/>
+    </g>
+    <g id="Key_1_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="640.333,439.887 645.327,437.433 
+        638.284,434.872 633.835,437.379       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="640.461" y1="445.116" x2="640.333" y2="439.887"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="633.835" y1="437.379" x2="633.835" y2="441.531"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="645.327" y1="437.433" x2="645.967" y2="439.455"/>
+    </g>
+    <g id="Key_2_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="631.863,435.918 636.857,433.464 
+        629.814,430.904 625.366,433.411       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="631.992" y1="441.147" x2="631.863" y2="435.918"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="625.366" y1="433.411" x2="625.366" y2="437.563"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="636.857" y1="433.464" x2="637.498" y2="435.487"/>
+    </g>
+    <g id="Key_3_">
+      <polygon fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="621.003,430.689 625.996,428.235 
+        618.954,425.674 614.505,428.182       "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="621.131" y1="435.918" x2="621.003" y2="430.689"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="614.505" y1="428.182" x2="614.505" y2="432.333"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="625.996" y1="428.235" x2="626.637" y2="430.257"/>
+    </g>
+    <g id="Key_4_">
+      <polyline fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" points="608.907,425.15 612.573,426.565 
+        617.567,424.111 610.524,421.55 610.208,421.729      "/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="612.702" y1="431.794" x2="612.573" y2="426.565"/>
+      <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="617.567" y1="424.111" x2="618.208" y2="426.134"/>
+    </g>
+  </g>
+</g>
+<g id="Mouse">
+  <g id="Wheel_Details">
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M747.609,473.631
+      c-4.771-0.822-14.721,4.235-14.721,4.235"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M749.788,474.7
+      c4.211-5.294,7.525,0.411,7.525,0.411"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M752.251,475.191c1.471-2.709,3.41-0.41,3.41-0.41
+      "/>
+  </g>
+  <path id="Mouse_Details" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M730.01,521.965
+    c13.446-43.399,43.92-30.233,43.92-30.233"/>
+  <path id="General_Outline_3_" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M770.101,483.253
+    c3.272,4.188,4.841,8.203,3.125,13.159c-3.217,1.441-8.65,3.503-12.006,7.072s-15.955,19.574-36.842,18.421
+    c-5.968-0.539-20.56,0.494-29.276-16.119c0,0,18.997-46.897,54.841-33.819c0,0-1.525,0.727-2.369,1.317
+    c7.201-5.035,10.398,1.663,10.398,1.663S763.594,474.947,770.101,483.253z"/>
+  <g id="Cord">
+    <path id="General_Outline_4_" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M764.557,477.757
+      c0.141-1.812,0.589-8.361-3.914-12.431c-7.606-7.65-23.478-7.444-34.005-13.857"/>
+    <path id="General_Outline_1_" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M721.128,450.893
+      c6.908,2.262,10.732,5.14,19.737,7.442c7.881,1.869,11.473,2.261,17.722,6.661c5.299,3.832,4.852,10.574,4.746,11.936"/>
+  </g>
+  <g id="Mousepad">
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M708.669,599.701
+      c-18.949-22.949-60.779-67.51-85.485-91.16c-6.322-6.053-9.716-8.064-8.265-12.213c1.151-3.289,2.012-3.369,6.703-4.646
+      c31.702-8.635,125.391-31.908,125.391-31.908l2.1-0.568l10.315-2.394c0,0,2.619-0.655,5.553-0.406
+      c2.802,0.21,4.44,1.675,4.44,1.675l70.498,53.051"/>
+  </g>
+  <g id="Logo">
+    <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M650.4,496.097c9.081-0.962,14.232,3.126,14.232,3.126l3.806-0.734
+      c1.054-0.505,4.632,0.459,2.339,2.247l-3.715,1.239c0,0,4.173,6.145-6.833,8.805c-1.192,0.321-11.648,2.798-16.922-3.852
+      c-5.274-6.65,2.751-9.814,2.751-9.814s-1.252-1.24-1.375-2.18c-0.092-1.219,1.908-1.427,2.74-1.025
+      C648.256,494.309,650.4,496.097,650.4,496.097z"/>
+    <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M646.478,503.689c-0.534-4.113,5.058-4.791,5.058-4.791
+      s6.455-1.254,9.683,1.994c3.227,3.249,0.945,5.88-2.714,6.805C654.846,508.624,647.013,507.801,646.478,503.689z"/>
+    <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M649.589,503.56c-0.33-2.537,3.121-2.957,3.121-2.957
+      s3.983-0.773,5.975,1.231c1.992,2.004,0.584,3.628-1.674,4.199C654.753,506.604,649.919,506.097,649.589,503.56z"/>
+    <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M652.864,503.423c-0.114-0.88,1.082-1.025,1.082-1.025
+      s1.382-0.268,2.071,0.426c0.691,0.695,0.203,1.258-0.581,1.456C654.654,504.479,652.979,504.303,652.864,503.423z"/>
+  </g>
+</g>
+<g id="Left_Monitor">
+  <g id="Base_1_">
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M561.214,353.743l17.145-17.169
+      c45.517,11.605,130.064,44.048,130.064,44.048l-27.146,23.116"/>
+    <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="708.423,380.622 709.738,381.284 
+      710.89,392.217 708.423,393.82 707.066,392.957 685.057,405.311     "/>
+    
+      <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="667.355" y1="365.42" x2="691.318" y2="354.295"/>
+    
+      <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="678.561" y1="369.485" x2="701.259" y2="357.828"/>
+    
+      <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="625.053" y1="350.715" x2="647.82" y2="340.008"/>
+    <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="647.82,338.833 647.82,344.092 
+      673.424,353.121     "/>
+    <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="675.328,348.612 675.328,352.781 
+      680.266,350.697     "/>
+  </g>
+  <g id="Front_Face">
+    <polygon id="Face" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="528.571,145.013 
+      523.143,294.52 750.117,375.194 774.294,183.5    "/>
+    <polygon id="Face_3_" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="536.623,153.154 
+      532.457,289.941 743.701,361.056 765.004,192.156     "/>
+  </g>
+  <g id="_x33_D">
+    <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="528.571,145.013 537.984,142.809 
+      781.591,181.745 757.915,371.421 750.117,375.194     "/>
+    <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="774.294" y1="183.5" x2="781.591" y2="181.745"/>
+  </g>
+</g>
+<g id="Right_Monitor">
+  <g id="Base_2_">
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M857.088,510.575c0,0-40.313-30.924-42.599-42.981
+      c-1.235-6.519,0.079-14.233,8.841-19.228c6.836-3.479,19.147-5.425,19.147-5.425"/>
+    
+      <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="861.482" y1="456.042" x2="858.858" y2="471.316"/>
+    <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="894.028,482.274 891.951,492.129 
+      903.196,489.665     "/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M861.482,474.495c0,0,6.563,7.896,21.488,16.036"
+      />
+  </g>
+  <g id="Face_4_">
+    <polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="807.107,380.622 821.169,223.22 
+      979.805,286.378 949.212,487.694     "/>
+    <polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="815.495,207.43 799.213,405.851 
+      952.913,529.737 992.88,273.549    "/>
+  </g>
+  <g id="_x33_D_1_">
+    <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="815.495,207.43 830.298,207.43 
+      1010.644,272.809 992.88,273.549     "/>
+    <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="952.913,529.737 969.689,526.427 
+      1010.644,272.809    "/>
+  </g>
+  
+    <ellipse id="Power" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="895.771" cy="470.885" rx="3.332" ry="7.038"/>
+</g>
+<g id="Table">
+  <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="479.58" y1="547.717" x2="540.084" y2="599.701"/>
+  
+    <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="436.586" y1="527.427" x2="516.434" y2="599.701"/>
+  
+    <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="757.955" y1="371.104" x2="800.716" y2="387.526"/>
+  
+    <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="981.642" y1="452.333" x2="1098.055" y2="498.082"/>
+</g>
+<g id="Pretzel">
+  <g id="Bag">
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M836.959,599.701l-2.631-5.305
+      c0,0,2.897-2.977,3.865-4.811c-1.399-1.193-2.603-0.74-2.603-0.74l-2.578-4.729c0,0-2.426-0.164-6.291,1.768
+      c-1.521-4.4-18.708-28.001-18.708-28.001s1.809-1.357,4.153-2.961c0-3.659-10.115-7.401-10.115-7.401s-8.882-13.261-9.499-16.776
+      c1.965-2.776,47.369-19.614,47.369-19.614l17.168-0.556l39.822-10.135l28.225,6.907"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M795.846,528.759c0,0,16.936,5.748,17.244,6.981
+      c2.282-0.062,2.25-0.37,3.331,1.295c1.081,1.666,4.502,5.736,4.502,5.736s2.961,4.564,2.406,5.798
+      c2.035-0.617,3.084-1.357,3.084-1.357l3.639,5.304l2.467,0.72l4.441,3.865c0,0,1.233,3.249,0,7.813
+      c4.112,10.609,12.911,34.787,12.911,34.787"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M973.634,502.003c0,0,20.542-1.418,25.99,0
+      c0.535-3.208,3.824-8.059,5.757-8.717c41.283,1.562,92.228,86.062,92.228,86.062l-31.455,11.359c0,0-42.676,0.369-55.51,8.994"/>
+  </g>
+  <g id="Details_2_">
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M999.624,502.003c0,0,6.906,1.518,16.503,1.334"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M1050.98,584.65
+      c-20.477-3.453-48.479-13.568-48.479-13.568"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M888.769,599.701
+      c-2.097-11.309-1.73-19.572-2.589-21.205c-0.742-1.41-1.967-1.746-1.967-1.746c-2.561,6.311-4.079,22.951-4.079,22.951"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M880.134,507.678"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M943.661,537.449
+      c-8.449-4.854-11.783-12.256-14.31-14.414c-6.724-5.746-5.612-1.271-11.102-7.586c-5.674-6.044-23.491-14.461-23.491-14.461"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M903.196,535.937c0,0,22.549,2.878,26.896,5.293
+      c11.102,6.168,46.504,58.471,46.504,58.471"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M1008.793,599.701
+      c-1.542-8.697,3.639-15.482-3.825-25.535c-7.031-8.697-29.667-33.121-37.979-36.606c0,0-11.985,0.948-24.356-0.195
+      c-15.46-1.428-39.438-1.428-39.438-1.428s-18.86-27.976-27.284-30.153"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M998.586,566.762c0,0,28.752-3.409,34.673-2.588
+      c0.658-11.678-7.406-21.458-11.513-25.658c-6.489-7.317-18.769-9.773-20.066-10.197c-15.932-5.208-29.644-16.427-29.644-16.427"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M921.465,518.567c0,0,6.76-5.107,10.881-5.408"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M854.189,599.701c0,0,22.656-11.881,27.446-11.924
+      "/>
+    
+      <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="887.161" y1="587.373" x2="891.635" y2="586.152"/>
+  </g>
+</g>
+<g id="Left_Monitor_Details">
+  <g id="Sublime">
+    
+      <line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="554.229" y1="156.161" x2="548.986" y2="295.506"/>
+    
+      <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="764.006" y1="200.064" x2="553.985" y2="162.302"/>
+    <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="553.808,166.757 555.101,164.169 
+      570.278,166.757 571.405,170.134 763.405,204.834     "/>
+  </g>
+  <g id="Text">
+    
+      <line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="563.536" y1="189.098" x2="739.336" y2="221.485"/>
+    <path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M563.536,207.43c0,0,157.5,44.27,158.4,44.27"
+      />
+    
+      <line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="563.536" y1="232.2" x2="710.89" y2="263.101"/>
+    
+      <line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="570.136" y1="260.104" x2="725.536" y2="288.142"/>
+    
+      <line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="591.136" y1="288.142" x2="732.437" y2="328.078"/>
+  </g>
+</g>
+<g id="Right_Monitor_Details">
+  
+  <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="819.935" y1="237.046" x2="977.158" y2="303.795"/>
+  <polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="829.336,232.2 829.336,235.9 
+    968.536,294.101 968.536,288.9   "/>
+  <polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="830.114,289.402 832.778,290.819 
+    831.901,287.48  "/>
+  <polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="829.375,297.497 832.34,298.778 
+    830.857,300.721   "/>
+  <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="831.409" y1="292.32" x2="831.114" y2="295.479"/>
+  <polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="835.64,288.858 831.904,336.3 
+    901.418,378.694 909.837,327   "/>
+  <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="841.736" y1="302.4" x2="890.836" y2="325.901"/>
+  
+    <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="844.537" y1="315.101" x2="896.047" y2="343.201"/>
+  <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="837.937" y1="327.201" x2="890.836" y2="348.3"/>
+  <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="844.537" y1="336.3" x2="894.137" y2="363"/>
+  <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="831.904" y1="358.259" x2="895.059" y2="400.28"/>
+  <polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="879.685,376.024 878.346,385.365 
+    898.269,398.032 899.832,388.433   "/>
+  <polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="919.221,337.376 911.388,385.376 
+    938.813,400.28 947.137,350.3  "/>
+  <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="927.237,471.357 936.854,411.201 
+    909.837,395.748 900.729,451.163   "/>
+  <polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="895.839,284.642 895.061,289.38 
+    901.679,292.417 902.459,287.679   "/>
+  <polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="903.614,288.338 902.929,292.99 
+    910.388,296.429 911.119,291.669   "/>
+  <polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="912.357,292.417 911.677,297.034 
+    921.088,301.322 921.707,296.514   "/>
+  <polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="922.962,297.086 922.323,301.848 
+    936.123,308.119 936.722,303.4   "/>
+  <polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="938.237,304.112 937.613,308.905 
+    951.327,315.197 952.102,310.43  "/>
+  <polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="884.289,279.299 883.58,284.112 
+    893.798,288.801 894.528,284.041   "/>
+  <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="890.836,443.709 896.942,406.185 
+    829.336,362.031 826.247,394.879   "/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M870.55,432.12"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M889.431,316.179"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M927.237,471.357"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M946.118,355.416"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M840.31,237.478"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M826.247,394.879"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M952.059,310.437"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M884.311,279.352"/>
+  <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="829.336" y1="270.42" x2="884.311" y2="297.497"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M898.937,316.179"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M835.59,284.642"/>
+</g>
+<g id="Desktop">
+  <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="456.255,347.535 554.229,315.408 
+    553.979,305.479   "/>
+  <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="549.756,144.69 548.986,117.751 
+    497.917,110.412 429.99,118.19   "/>
+  
+    <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="548.986" y1="117.751" x2="458.645" y2="128.869"/>
+  <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="479.491" y1="145.361" x2="549.507" y2="135.97"/>
+  <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="479.856" y1="126.258" x2="481.52" y2="145.089"/>
+  <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="447.014,122.23 461.712,126.258 
+    480.688,125.44 528.078,119.684 531.531,116.888 502.337,112.118 480.688,112.94 438.572,117.868 438.572,119.586   "/>
+</g>
+</svg>
+</div><div class="title"><p class="name">Kevin Wu</p><p class="tagline">A personal website</p></div></div></div><div id="about"><div class="container"><div class="wall"><div class="counter"><img src="imgs/portrait.svg" alt="Portrait" class="portrait"><img src="imgs/backpack.svg" alt="Student" class="student"><img src="imgs/laptop.svg" alt="Hacker" class="hacker"><img src="imgs/desktop.svg" alt="Gamer" class="gamer"><div class="portrait-content content"><div class="arrow"></div><div class="wrapper"><img src="imgs/cancel.svg" alt="Cancel" class="cancel"><div class="padding"></div><div class="text"><div class="actual-text">Hi, I'm <span>Kevin</span> and I'm passionate about technology. Raised in the Silicon Valley and earning my EECS degree at UC Berkeley, I've spent a large portion of my time building cool projects that push the boundaries of what I've learnt at school.  I believe that the key to success is not only having a strong grasp of the fundamentals in a variety of areas, but also being able to have the initiative to go out into the world and make things happen. I'm looking forward to taking the skills that I've honed and repurposing them to create amazing products that will make people's lives that much more exciting.</div><div class="text-fade-before"></div><div class="text-fade-after"></div></div></div></div><div class="student-content content"><div class="arrow"></div><div class="wrapper"><img src="imgs/cancel.svg" alt="Cancel" class="cancel"><div class="padding"></div><div class="text"><div class="actual-text">I am a <span>student</span>. Despite having spent a large chunk of my life at college, I have found that I have an unquenchable thirst for knowledge that drives me to learn no matter where I am. I feel that the best way to grow as a developer, designer, and person is to always be bringing in new ideas and perspectives. By pushing the boundaries of what I can do, I can show that I am a multifaceted individual who can bring a lot to the table.</div><div class="text-fade-before"></div><div class="text-fade-after"></div></div></div></div><div class="hacker-content content"><div class="arrow"></div><div class="wrapper"><img src="imgs/cancel.svg" alt="Cancel" class="cancel"><div class="padding"></div><div class="text"><div class="actual-text">I am a <span>hacker</span>. I love making things. As a developer, I love coming up with an idea and being able to immediately execute it to produce something that people can play with and enjoy. I am always full of crazy ideas - some useful and some not - that I am constantly trying to implement. Some of these ideas end up becoming pretty great projects while others might just be "learning experiences". Regardless, I am always up for diving into the unknown and making something really cool. </div><div class="text-fade-before"></div><div class="text-fade-after"></div></div></div></div><div class="gamer-content content"><div class="arrow"></div><div class="wrapper"><img src="imgs/cancel.svg" alt="Cancel" class="cancel"><div class="padding"></div><div class="text"><div class="actual-text">I'm a <span>gamer</span>. Sitting down and exploring a fantasy world or engaging with others in a competitive shooter is something that I find extremely entertaining and fun. However, it isn't just the game that excites me. What I find really inspiring is the creativity and passion that the developers have when designing and creating this virtual reality for others to spend their time in. Being able to produce a world and a story that is convincing enough to engage players is something that I hope to reproduce in order to create products that are just as captivating.</div><div class="text-fade-before"></div><div class="text-fade-after"></div></div></div></div></div></div><div class="table"><div class="top"></div><div class="shadow"></div></div></div></div><div id="experience"><div class="container"><div class="timeline"><div class="start">Late 2012</div><div class="end">Present</div></div><div class="spacing"></div><div id="introduction" class="content"><div class="title"><span class="strong">Timeline</span>&nbsp;</div><div class="text"><div class="actual-text">Even though I have spent a lot of time at school, I have had more experiences beyond taking tests. Check out some of my most interesting projects on the left!</div><div class="text-fade-before"></div><div class="text-fade-after"></div></div><div class="breakdown"></div></div><div id="skirmish" class="content"><div class="date"><span class="strong">S</span> Spring 2013</div><div class="title"><span class="strong">Skirmish</span>&nbsp;</div><div class="text"><div class="actual-text">Not every project is a success, and Skirmish was one of my first attempts at a large project. Working with my two housemates, we created a simple real time strategy game in Java. This project incorporated a lot of moving parts, including a pathfinding algorithm on top of a simple A* search to ensure clumps of colliding units could path around one another smoothly, a rendering engine that properly handled fog of war and the various game sprites, a modular infrastructure where unit properties could be tweaked on the go, and a server-client system so multiple clients could start a game together.
 
 <br><br>
 

@@ -774,8 +774,18 @@
   });
 
   $(function() {
-    var $home;
-    return $home = $("#home");
+    var $home, animateIn, vivus;
+    $home = $("#home");
+    vivus = new Vivus("kevin", {
+      type: "delayed",
+      duration: 200,
+      delay: 100,
+      start: "manual"
+    });
+    animateIn = function() {
+      return vivus.play(1);
+    };
+    return $home.data("transitionIn", animateIn);
   });
 
   $window.load(function() {
