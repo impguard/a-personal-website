@@ -1,4 +1,8 @@
-At Palantir, I worked with 3 other interns to build an interactive web app that served as a prototype for the Palantir Metropolis team as they began transitioning their Swing-Java codebase to the web. During this time I maintained unit tests using Mocha and Gerrit and utilized a GruntJS based build system. I was also in charge of maintaining a Wiki page documenting our research, code infrastructure, and design decisions.
+At Palantir, I worked with 3 other interns to build an interactive web app for the Metropolis team that served as a prototype of how their Swing-Java dominated codebase would look like in the web. The goal was to serve as a stepping stone as most of Palantir's software projects moved from a client side app to a web-based service. During this time, I maintained unit tests using Mocha and Gerrit and utilized a GruntJS based build system. I was also in charge of maintaining a Wiki page documenting our research, code infrastructure, and design decisions.
+
+<br><br>
+
+Palantir utilized the Scrum framework of Agile development, and I took part in daily standups with my project partners, weekly standups with my group, and 3 week sprints among the Metropolis team. I commonly served as the Scrum master, ensuring that we produce valuable code that would be used in the future when we left.
 
 <br><br>
 
