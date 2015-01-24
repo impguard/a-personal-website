@@ -463,6 +463,7 @@ a {
 #experience .container .content {
   display: none;
   opacity: 0;
+  padding-bottom: 1.5%;
   position: relative;
   overflow: hidden;
   vertical-align: top;
@@ -537,7 +538,6 @@ a {
   box-sizing: border-box;
   height: calc(40% - 80px);
   position: relative;
-  padding-bottom: 1%;
 }
 #experience .container .content .breakdown::before {
   content: "";
@@ -590,10 +590,9 @@ a {
   max-height: 100%;
   padding: 3% 4% 3%;
   position: absolute;
-  top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
   border-width: 2px;
   border-style: solid;
   border-radius: 15px;

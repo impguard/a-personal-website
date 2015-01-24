@@ -335,7 +335,10 @@
       var $breakdown, dialSize;
       $breakdown = $currentContent.children(".breakdown");
       dialSize = Math.min(dialMaxSize, dialHeightRatio * $breakdown.height(), dialWidthRatio * $breakdown.width());
-      return $breakdown.children(".block").width(dialSize).height(dialSize);
+      $breakdown.children(".block").width(dialSize).height(dialSize);
+      return $breakdown.children(".popup").children(".text").css({
+        bottom: dialSize / 2
+      });
     };
     updateCodeDials = function() {
       var $breakdown, breakdown, dialSize, showDials;
@@ -376,7 +379,8 @@
         $expander = $("<div >").addClass("expander");
         $popup = $("<div />").addClass("popup").append($("<div />").addClass("text").html(item.content).css({
           "border-color": colors.primary,
-          "background-color": colors.secondary
+          "background-color": colors.secondary,
+          "bottom": dialSize / 2
         }).append($("<div />").addClass("triangle-blank").css({
           "border-right-color": colors.secondary
         })));

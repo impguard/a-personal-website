@@ -394,6 +394,7 @@ $window.load(() ->
         $breakdown = $currentContent.children(".breakdown")
         dialSize = Math.min(dialMaxSize, dialHeightRatio * $breakdown.height(), dialWidthRatio * $breakdown.width())
         $breakdown.children(".block").width(dialSize).height(dialSize)
+        $breakdown.children(".popup").children(".text").css({ bottom: dialSize / 2 })
 
     # Updates current content code dials, adding them if they don't exist
     updateCodeDials = () ->
@@ -443,6 +444,7 @@ $window.load(() ->
                 $("<div />").addClass("text").html(item.content).css(
                     "border-color": colors.primary
                     "background-color": colors.secondary
+                    "bottom": dialSize / 2
                 ).append(
                     $("<div />").addClass("triangle-blank").css(
                         "border-right-color": colors.secondary
