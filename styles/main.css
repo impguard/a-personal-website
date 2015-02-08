@@ -5,7 +5,7 @@
   background-color: #1a4a72;
 }
 .experience-theme {
-  background-color: #b3b3b3;
+  background-color: #c9c9c9;
 }
 .hobbies-theme {
   background-color: #414b56;
@@ -340,7 +340,7 @@ a {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
 }
 #experience {
-  background-color: #b3b3b3;
+  background-color: #c9c9c9;
 }
 #experience .container {
   box-sizing: border-box;
@@ -493,7 +493,7 @@ a {
   float: right;
 }
 #experience .container .content .date .strong {
-  color: #b3b3b3;
+  color: #c9c9c9;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -529,10 +529,10 @@ a {
   pointer-events: none;
 }
 #experience .container .content .text .text-fade-before {
-  background: linear-gradient(to bottom, #b3b3b3 0%, rgba(179, 179, 179, 0) 15%);
+  background: linear-gradient(to bottom, #c9c9c9 0%, rgba(201, 201, 201, 0) 15%);
 }
 #experience .container .content .text .text-fade-after {
-  background: linear-gradient(to top, #b3b3b3 0%, rgba(179, 179, 179, 0) 15%);
+  background: linear-gradient(to top, #c9c9c9 0%, rgba(201, 201, 201, 0) 15%);
 }
 #experience .container .content .breakdown {
   box-sizing: border-box;
