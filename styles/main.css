@@ -382,8 +382,8 @@ a {
   -ms-user-select: none;
   user-select: none;
 }
-#experience .container .timeline .start,
-#experience .container .timeline .end {
+#experience .container .timeline .top,
+#experience .container .timeline .bottom {
   position: absolute;
   left: calc(100% + 15px);
   color: black;
@@ -391,10 +391,10 @@ a {
   font-weight: 300;
   white-space: nowrap;
 }
-#experience .container .timeline .start {
+#experience .container .timeline .top {
   top: 0;
 }
-#experience .container .timeline .end {
+#experience .container .timeline .bottom {
   bottom: 0;
 }
 #experience .container .timeline .item {

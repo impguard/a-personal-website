@@ -584,7 +584,7 @@ $window.load(() ->
             .addClass("item")
             .append($extension)
             .css(
-                "top": "#{position}%" 
+                "bottom": "#{position}%" 
                 "height": "#{height}%" 
                 "background-color": color
             )
