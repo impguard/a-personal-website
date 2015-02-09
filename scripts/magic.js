@@ -92,16 +92,17 @@
     };
     $contents.show().hide();
     updateContentSize = function() {
-      var $actualText, $content, $text, $wrapper, textHeight, wallHeight;
+      var $actualText, $content, $text, $wrapper, counterHeight, textHeight;
       $content = $currentButton.data("$content");
       $wrapper = $content.children(".wrapper");
       $text = $wrapper.children(".text");
       $actualText = $text.children(".actual-text").css("height", "auto");
-      wallHeight = $wall.height() - 100;
+      counterHeight = $counter.height() - 95;
       textHeight = $text.height();
-      $wrapper.children(".cancel").height(wallHeight * 0.09);
-      $wrapper.children(".padding").height(wallHeight * 0.01);
-      $actualText.height(Math.min(textHeight, wallHeight * 0.9));
+      console.log(counterHeight);
+      $wrapper.children(".cancel").height(counterHeight * 0.09);
+      $wrapper.children(".padding").height(counterHeight * 0.01);
+      $actualText.height(Math.min(textHeight, counterHeight * 0.9));
       return $actualText.perfectScrollbar("update");
     };
     updateTextShadows = function() {
