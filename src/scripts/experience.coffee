@@ -31,8 +31,8 @@ $window.load(() ->
             "primary": "#0061C4"
             "secondary": "#E5FFFF"
         "js":
-            "primary": "purple"
-            "secondary": "gray"
+            "primary": "#EEB400"
+            "secondary": "#F8F4CB"
         "less":
             "primary": "#16274C"
             "secondary": "#E2F3FF"
@@ -51,7 +51,7 @@ $window.load(() ->
         "misc.":
             "primary": "#6B3919"
             "secondary": "#FFECCC"
-        "leadership":
+        "agile":
             "primary": "black"
             "secondary": "#E5E5E5"
         "ruby":

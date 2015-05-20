@@ -24,7 +24,7 @@
             "content": "coliseum.txt",
             "breakdown": [
                 {
-                    "lang": "Javascript",
+                    "lang": "JS",
                     "percent": 70,
                     "content": "coliseum-javascript.txt"
                 },
@@ -34,9 +34,9 @@
                     "content": "coliseum-ruby.txt"
                 },
                 {
-                    "lang": "Leadership",
+                    "lang": "Agile",
                     "percent": 100,
-                    "content": "coliseum-leadership.txt"
+                    "content": "coliseum-agile.txt"
                 }
 
             ]

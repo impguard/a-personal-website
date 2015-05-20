@@ -1,0 +1,13 @@
+The project that would become known as Coliseum started off as an assignment for the UC Berkeley upper division course: CS 169 - Software Engineering. Initially termed Penpal Gladiators, it was an app dreamed up by Professor Larry Rosenthal who hoped that it could become a place for people of differing political backgrounds to come together and share their opinions on high profile political topics. Partnering up with 5 other students taking the course, we worked with Larry to execute his dream by taking the first stab at developing a minimum viable product.
+
+<br><br>
+
+Over the course of 4 2-week iterations, our group learned a tremendous amount with regards to working in a more organized and Agile environment, utilizing all sorts of tools to ensure success. Our main framework consisted of a Ruby on Rails backend environment handling API calls to perform operations to create and match users as well as store conversation information, an AngularJS frontend allowing us to create a very simple single page application, and a continuous deployment infrastructure consisting of Github, Travis, and Heroku.
+
+<br><br>
+
+As the scrum master, I coordinated the entire team to ensure that standups were efficient, the environment was positive, and communication channels were clear. As part tech lead, I bootstrapped the application and the infrastructure, setting up our Cucumber, RSpec, and Jasmine testing frameworks, as well as our continuous deployment architecture. At the end of the day, I was continuously making sure that everyone else knew what they were supposed to be doing and were not blocked when trying to do it.
+
+<br><br>
+
+It was a great experience, featuring a final <a href="imgs/poster.pdf">poster</a> session where we showcased our app to the public. It is one of the few that I felt was developed in a more professional work environment that I helped create.
