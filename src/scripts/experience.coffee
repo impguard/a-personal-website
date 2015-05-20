@@ -10,7 +10,7 @@ $window.load(() ->
     $timeline = $experience.find(".timeline")
 
     startDate = new Date("November 1 2012")
-    endDate = new Date("June 1 2015")
+    endDate = new Date("August 1 2015")
     totalDays = Date.daysInBetween(startDate, endDate)
 
     # Fill in later

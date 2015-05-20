@@ -17,7 +17,7 @@
             "id": "coliseum",
             "time": "Spring 2015",
             "github": "https://github.com/Fong-/CS169-PenPal-Gladiators",
-            "web": "http://penpal-gladiators.herokuapp.com",
+            "website": "http://penpal-gladiators.herokuapp.com",
             "endDate": "5-13-2015",
             "duration": 2,
             "type": "project",
@@ -32,7 +32,7 @@
                     "lang": "Ruby",
                     "percent": 30,
                     "content": "coliseum-ruby.txt"
-                }
+                },
                 {
                     "lang": "Leadership",
                     "percent": 100,
@@ -93,7 +93,7 @@
             "id": "instaparser",
             "time": "Fall 2014",
             "github": "https://github.com/ImpGuard/instaparse",
-            "web": "https://instaparser.herokuapp.com/",
+            "website": "https://instaparser.herokuapp.com/",
             "endDate": "11-10-2014",
             "duration": 1,
             "type": "project",

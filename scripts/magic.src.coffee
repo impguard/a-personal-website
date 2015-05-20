@@ -308,12 +308,12 @@ $window.load(() ->
     $timeline = $experience.find(".timeline")
 
     startDate = new Date("November 1 2012")
-    endDate = new Date("June 1 2015")
+    endDate = new Date("August 1 2015")
     totalDays = Date.daysInBetween(startDate, endDate)
 
     # Fill in later
     langToColor = {
-        "c++": 
+        "c++":
             "primary": "#3FA9F5"
             "secondary": "#B2DDFB"
         "java":
@@ -349,6 +349,12 @@ $window.load(() ->
         "misc.":
             "primary": "#6B3919"
             "secondary": "#FFECCC"
+        "leadership":
+            "primary": "black"
+            "secondary": "#E5E5E5"
+        "ruby":
+            "primary": "#9D0000"
+            "secondary": "#FFF4FF"
     }
 
     #============================================================
@@ -383,7 +389,7 @@ $window.load(() ->
     dialMaxSize = 200
 
     # Save global content with each breakdown
-    $.each(experienceData, (index, item) -> 
+    $.each(experienceData, (index, item) ->
         $("##{item.id}").data("breakdown", item.breakdown)
     )
 
@@ -481,9 +487,9 @@ $window.load(() ->
                     if not isLast
                         $expander.velocity("stop").velocity({ width: "45%" }, 500, "ease-in-out")
                         popupFadeDelay = 300
-                    $popup.velocity("stop").velocity("fadeIn",  
+                    $popup.velocity("stop").velocity("fadeIn",
                         delay: popupFadeDelay
-                        duration: 300 
+                        duration: 300
                         display: "inline-block"
                     )
                 () ->
@@ -499,7 +505,7 @@ $window.load(() ->
             # Append
             $breakdown.append($block, $popup, $expander)
         )
-        
+
         # Show dials
         showDials()
 
@@ -587,8 +593,8 @@ $window.load(() ->
             .addClass("item")
             .append($extension)
             .css(
-                "bottom": "#{position}%" 
-                "height": "#{height}%" 
+                "bottom": "#{position}%"
+                "height": "#{height}%"
                 "background-color": color
             )
 
@@ -608,7 +614,7 @@ $window.load(() ->
     animateInContent = () ->
         $currentContent.css("display", "block")
         updateTextShadows()
-        $currentContent.velocity("stop").velocity("transition.slideRightBigIn", 
+        $currentContent.velocity("stop").velocity("transition.slideRightBigIn",
             duration: 600
             complete: () ->
                 $currentContent.css("transform", "none")
@@ -684,9 +690,10 @@ $window.load(() ->
                 })
             })
         )
-    
+
     $experience.data("transitionIn", animateIn)
 )
+
 $(() ->
 
     # Constants

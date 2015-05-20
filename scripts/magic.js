@@ -253,7 +253,7 @@
     $container = $experience.children(".container");
     $timeline = $experience.find(".timeline");
     startDate = new Date("November 1 2012");
-    endDate = new Date("June 1 2015");
+    endDate = new Date("August 1 2015");
     totalDays = Date.daysInBetween(startDate, endDate);
     langToColor = {
       "c++": {
@@ -303,6 +303,14 @@
       "misc.": {
         "primary": "#6B3919",
         "secondary": "#FFECCC"
+      },
+      "leadership": {
+        "primary": "black",
+        "secondary": "#E5E5E5"
+      },
+      "ruby": {
+        "primary": "#9D0000",
+        "secondary": "#FFF4FF"
       }
     };
     containerMaxWidth = 1900;
