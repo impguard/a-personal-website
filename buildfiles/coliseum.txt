@@ -10,4 +10,4 @@ As the scrum master, I coordinated the entire team to ensure that standups were 
 
 <br><br>
 
-It was a great experience, featuring a final <a href="imgs/poster.pdf">poster</a> session where we showcased our app to the public. It is one of the few that I felt was developed in a more professional work environment that I helped create.
+It was a great experience, featuring a final <a href="imgs/poster.pdf" target="_blank">poster</a> session where we showcased our app to the public. It is one of the few that I felt was developed in a more professional work environment that I helped create.
