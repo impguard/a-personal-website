@@ -269,7 +269,7 @@ $(() ->
     # Create email
     #============================================================
 
-    email = "kevinDOTwuATberkeleyDOTedu".replace(/DOT/g, ".").replace(/AT/g, "@")
+    email = "contactATkevinwuDOTio".replace(/DOT/g, ".").replace(/AT/g, "@")
     $email.attr("href", "mailto:#{email}")
     $email.html(email)
 
@@ -293,9 +293,10 @@ $(() ->
                 $text.css("transform", "")
         )
         $icons.velocity("transition.shrinkIn", { display: "inline-block" })
-    
+
     $contact.data("transitionIn", animateIn)
 )
+
 $window.load(() ->
 
     #============================================================

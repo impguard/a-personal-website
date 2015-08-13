@@ -219,7 +219,7 @@
     $linkedin = $contact.find(".linkedin img");
     $resume = $contact.find(".resume img");
     $email = $contact.find(".email");
-    email = "kevinDOTwuATberkeleyDOTedu".replace(/DOT/g, ".").replace(/AT/g, "@");
+    email = "contactATkevinwuDOTio".replace(/DOT/g, ".").replace(/AT/g, "@");
     $email.attr("href", "mailto:" + email);
     $email.html(email);
     $github.click(function() {
